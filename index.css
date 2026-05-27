@@ -1,0 +1,1043 @@
+/* ==========================================================================
+   CSS Reset & Variables
+   ========================================================================== */
+   :root {
+    --primary-green: #0d3b26; /* Deep Emerald Green */
+    --secondary-green: #144f36;
+    --gold: #d4af37; /* Luxury Gold */
+    --gold-light: #f3df96;
+    --dark: #1a1a1a;
+    --dark-muted: #333333;
+    --gray-bg: #fdfaf6; /* Light Beige */
+    --gray-line: #eaeaea;
+    --white: #ffffff;
+    
+    --font-sans: 'Noto Sans KR', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+  
+    --br-sm: 8px;
+    --br-md: 16px;
+    --br-lg: 24px;
+    
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 16px 40px rgba(13, 59, 38, 0.15);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 10px; /* 1rem = 10px */
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    color: var(--dark);
+    line-height: 1.5;
+    background-color: var(--white);
+    overflow-x: hidden;
+  }
+  
+  p, span, li, a, button, h1, h2, h3, h4, h5, h6 {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .pc_only {
+    display: inline;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  /* ==========================================================================
+     Typography & Utility Classes
+     ========================================================================== */
+  .font_outfit { font-family: var(--font-outfit); }
+  .font_bold { font-weight: 700; }
+  .font_extrabold { font-weight: 900; }
+  .font_medium { font-weight: 500; }
+  
+  .fs_12 { font-size: 1.2rem; }
+  .fs_14 { font-size: 1.4rem; }
+  .fs_16 { font-size: 1.6rem; }
+  .fs_18 { font-size: 1.8rem; }
+  .fs_20 { font-size: 2.0rem; }
+  .fs_22 { font-size: 2.2rem; }
+  .fs_24 { font-size: 2.4rem; }
+  .fs_28 { font-size: 2.8rem; }
+  .fs_32 { font-size: 3.2rem; }
+  .fs_40 { font-size: 4.0rem; }
+  .fs_48 { font-size: 4.8rem; }
+  .fs_64 { font-size: 6.4rem; }
+  
+  .fc_dark { color: var(--dark); }
+  .fc_gold { color: var(--gold); }
+  .fc_white { color: var(--white); }
+  .fc_muted { color: #666; }
+  .fc_muted_light { color: #a0a0a0; }
+  
+  .bg_dark { background-color: var(--primary-green); }
+  .bg_gold { background-color: var(--gold); }
+  .bg_white { background-color: var(--white); }
+  .bg_gray { background-color: var(--gray-bg); }
+  .bg_dark_opacity { background-color: rgba(13, 59, 38, 0.7); }
+  
+  .ta_cen { text-align: center; }
+  .ta_l { text-align: left; }
+  .ta_r { text-align: right; }
+  
+  .d_flex { display: flex; }
+  .flex_column { flex-direction: column; }
+  .jc_sb { justify-content: space-between; }
+  .jc_cen { justify-content: center; }
+  .ai_cen { align-items: center; }
+  
+  .gap2 { gap: 0.8rem; }
+  .gap4 { gap: 1.6rem; }
+  .gap6 { gap: 2.4rem; }
+  .gap8 { gap: 3.2rem; }
+  
+  .mt2 { margin-top: 0.8rem; }
+  .mt4 { margin-top: 1.6rem; }
+  .mt6 { margin-top: 2.4rem; }
+  .mt8 { margin-top: 3.2rem; }
+  .mt10 { margin-top: 4.0rem; }
+  .mb2 { margin-bottom: 0.8rem; }
+  .mb4 { margin-bottom: 1.6rem; }
+  .mb6 { margin-bottom: 2.4rem; }
+  .mb10 { margin-bottom: 4.0rem; }
+  .mr2 { margin-right: 0.8rem; }
+  
+  .px4 { padding-left: 1.6rem; padding-right: 1.6rem; }
+  .px6 { padding-left: 2.4rem; padding-right: 2.4rem; }
+  .px8 { padding-left: 3.2rem; padding-right: 3.2rem; }
+  .py3 { padding-top: 1.2rem; padding-bottom: 1.2rem; }
+  .py4 { padding-top: 1.6rem; padding-bottom: 1.6rem; }
+  
+  .w_40 { width: 40%; }
+  .w_60 { width: 60%; }
+  
+  .lh_1_6 { line-height: 1.6; }
+  .opacity_60 { opacity: 0.6; }
+  
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .shadow { box-shadow: var(--shadow); }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2.4rem;
+    border-radius: var(--br-md);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .btn_kakao {
+    background-color: #FEE500;
+    color: #191919;
+    font-size: 1.6rem;
+  }
+  .btn_kakao:hover { background-color: #e6ce00; }
+  .btn_dark {
+    background-color: var(--primary-green);
+    color: var(--white);
+  }
+  .btn_dark:hover {
+    background-color: var(--secondary-green);
+  }
+  .btn_line {
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 40px;
+  }
+  .btn_line:hover {
+    background-color: var(--white);
+    color: var(--primary-green);
+  }
+  
+  /* ==========================================================================
+     Header
+     ========================================================================== */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--gray-line);
+    display: flex;
+    align-items: center;
+  }
+  .header .logo_text {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--primary-green);
+  }
+  .header .logo_text strong {
+    font-weight: 900;
+  }
+  .header_call {
+    text-align: right;
+  }
+  .header_call .call_num {
+    color: var(--primary-green);
+  }
+  
+  /* ==========================================================================
+     Quick Menu (Floating)
+     ========================================================================== */
+  #quick_menu {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #quick_menu .quick_btn, #quick_menu .top_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  #quick_menu .quick_btn {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+  #quick_menu .quick_btn .inner_ctr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  #quick_menu .quick_btn i {
+    font-size: 2.8rem;
+    color: var(--gold);
+  }
+  #quick_menu .quick_btn p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  #quick_menu .top_btn {
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+    font-size: 2.0rem;
+  }
+  #quick_menu a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+  
+  /* ==========================================================================
+     Main Hero
+     ========================================================================== */
+  .main_hero {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 0; 
+    min-height: 700px;
+    background: url('hero_bg.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .main_hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(13, 59, 38, 0.95) 0%, rgba(13, 59, 38, 0.7) 60%, rgba(13, 59, 38, 0) 100%);
+    z-index: 1;
+  }
+  .hero_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 80px;
+  }
+  .hero_text {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+  }
+  .hero_title {
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .hero_desc {
+    color: var(--white);
+  }
+  .hero_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .hero_list li {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+  }
+  .hero_btn_pack {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+  }
+  .hero_btn {
+    flex: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .hero_btn:hover {
+    transform: translateY(-5px);
+  }
+  .hero_btn .btn_top {
+    background: rgba(13, 59, 38, 0.85); /* 딥그린 투명 배경 */
+    padding: 1rem 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero_btn .btn_bottom {
+    background: var(--white);
+    color: var(--dark);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.2rem 0.5rem;
+  }
+  
+  /* ==========================================================================
+     Section 1 (Promises)
+     ========================================================================== */
+  .sect_promise {
+    padding: 120px 0;
+  }
+  .sect_promise_inner {
+    align-items: flex-start;
+  }
+  .promise_list {
+    flex: 1;
+  }
+  .p_list_card {
+    padding: 40px;
+    border-radius: var(--br-md);
+    border-bottom: 3px solid rgba(0,0,0,0.05);
+  }
+  .p_list_card .line {
+    width: 50px;
+    height: 3px;
+    background: var(--primary-green);
+    margin: 15px 0;
+  }
+  .p_list_card .line.bg_gold {
+    background: var(--gold);
+  }
+  
+  /* ==========================================================================
+     Section 2 (Product)
+     ========================================================================== */
+  .sect_product {
+    padding: 120px 0;
+    background: var(--gray-bg);
+  }
+  .fc_primary_green { color: var(--primary-green); }
+  
+  .prod_tabs {
+    /* flex width handled by w_30 */
+  }
+  .prod_tab {
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--br-sm);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--fc_muted);
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .prod_tab.active {
+    background: #e8f5f0;
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .prod_card {
+    padding: 50px;
+    border-radius: var(--br-md);
+    border: 1px solid var(--gray-line);
+  }
+  .prod_price_box {
+    border-top: 1px solid var(--gray-line);
+    padding-top: 30px;
+  }
+  .mx2 { margin: 0 0.8rem; }
+  .rounded { border-radius: var(--br-md); }
+  
+  /* ==========================================================================
+     Section 3 (5대 혜택 Swiper)
+     ========================================================================== */
+  .sect_benefits {
+    padding: 120px 0;
+    background: var(--white);
+  }
+  .sect_benefits_content {
+    align-items: stretch;
+  }
+  .swiper-nav-thumbs {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  .nav_tab {
+    padding: 30px 20px;
+    background: var(--gray-bg);
+    border-radius: var(--br-md);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    height: auto !important; /* swiper default override */
+  }
+  .nav_tab.swiper-slide-thumb-active {
+    background: var(--primary-green);
+    color: var(--white);
+    border-color: var(--gold);
+  }
+  .nav_tab.swiper-slide-thumb-active p {
+    color: var(--white);
+  }
+  .swiper-main-content {
+    flex: 1;
+    border-radius: var(--br-lg);
+    overflow: hidden;
+  }
+  .slide_inner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  .slide_inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    padding: 30px 40px;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* 롤링 텍스트 애니메이션 */
+  .rolling_text_wrap {
+    position: relative;
+    height: 95px; /* 세 줄 텍스트 높이 확보 */
+    overflow: hidden;
+  }
+  .rolling_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    animation: textRollingFade 8s infinite;
+  }
+  .rolling_item.item1 {
+    animation-delay: 0s;
+  }
+  .rolling_item.item2 {
+    animation-delay: 4s;
+  }
+  @keyframes textRollingFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    40% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+  
+  /* 마인드맵 라벨 오버레이 */
+  .mindmap_labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    pointer-events: none; /* 클릭 방해 금지 */
+    z-index: 5;
+  }
+  .m_label {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 2px solid var(--primary-green);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+  }
+  /* 중앙 및 방사형 배치 (총 7개) */
+  .m_label.m1 { top: 18%; left: 30%; }
+  .m_label.m2 { top: 18%; left: 70%; }
+  .m_label.m3 { top: 38%; left: 18%; }
+  .m_label.m4 { top: 38%; left: 82%; }
+  .m_label.m5 { top: 58%; left: 30%; }
+  .m_label.m6 { top: 58%; left: 70%; }
+  .m_label.m7 { top: 38%; left: 50%; border-color: var(--gold); color: var(--gold); } /* 중앙 하이라이트 */
+
+  /* ==========================================================================
+     Section 4 (Golf Benefits)
+     ========================================================================== */
+  .sect_golf {
+    padding: 120px 0;
+  }
+  .golf_card_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .golf_card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--br-md);
+    padding: 40px 30px;
+    border: 1px solid var(--gray-line);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .golf_card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+  .golf_thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+  .golf_text {
+    flex: 1;
+  }
+
+  /* ==========================================================================
+     Section 5 (Healthcare Detail Cards)
+     ========================================================================== */
+  .sect_care {
+    padding: 120px 0;
+  }
+  .care_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .care_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: var(--br-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid transparent;
+  }
+  .care_card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-top: 4px solid var(--primary-green);
+  }
+  .care_card .icon_box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gray-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: background-color 0.3s;
+  }
+  .care_card:hover .icon_box {
+    background-color: #e5f4ef;
+  }
+  
+  @media (max-width: 968px) {
+    .care_grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .care_grid { grid-template-columns: 1fr; }
+  }
+
+  /* ==========================================================================
+     Section 6 (FAQ)
+     ========================================================================== */
+  .sect_faq {
+    padding: 120px 0;
+  }
+  .accord_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .accord_item {
+    background: var(--white);
+    border-radius: var(--br-md);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .accord_btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark);
+    text-align: left;
+    transition: background 0.3s;
+  }
+  .accord_btn:hover {
+    background: #fdfdfd;
+  }
+  .accord_btn .icon {
+    font-size: 2.0rem;
+    color: var(--primary-green);
+    transition: transform 0.3s;
+  }
+  .accord_desc {
+    max-height: 0;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    background: var(--white);
+    border-top: 1px solid var(--gray-line);
+    opacity: 0;
+  }
+  .accord_item.active .accord_desc {
+    max-height: 200px;
+    padding: 25px 30px;
+    opacity: 1;
+  }
+  .accord_item.active .accord_btn .icon {
+    transform: rotate(180deg);
+  }
+  
+  /* ==========================================================================
+     Footer
+     ========================================================================== */
+  .footer {
+    padding: 80px 0 60px;
+  }
+  .footer_inner {
+    align-items: flex-start;
+  }
+  .footer_info {
+    width: 70%;
+  }
+  
+  /* ==========================================================================
+     Animations (Scroll Observer)
+     ========================================================================== */
+  .animate_up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.0s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .animate_left {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 1.0s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .animate_right {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 1.0s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .animate_up.is_visible,
+  .animate_left.is_visible,
+  .animate_right.is_visible {
+    opacity: 1;
+    transform: translate(0);
+  }
+  
+  /* Delay variations */
+  .delay_100 { transition-delay: 0.1s; }
+  .delay_200 { transition-delay: 0.2s; }
+  .delay_300 { transition-delay: 0.3s; }
+  
+  /* ==========================================================================
+     Responsive
+     ========================================================================== */
+  /* ==========================================================================
+     Responsive
+     ========================================================================== */
+  @media (max-width: 968px) {
+    html { font-size: 8.5px; }
+    .hero_content { flex-direction: column; text-align: center; }
+    .hero_text { width: 100%; }
+    .hero_img_wrap { width: 100%; margin-top: 40px; justify-content: center; }
+    .hero_btn_pack { max-width: 100%; margin: 40px auto 0; }
+    
+    .sect_promise_inner { flex-direction: column; }
+    .sect_promise_inner > div { width: 100%; }
+    
+    .sect_benefits_content { flex-direction: column; }
+    .swiper-nav-thumbs { width: 100%; }
+    .swiper-nav-thumbs .swiper-wrapper { flex-direction: row; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+    .nav_tab { padding: 15px; flex-shrink: 0; width: auto; white-space: nowrap; }
+    
+    .sect_faq > .wrap { flex-direction: column; }
+    .w_40, .w_60 { width: 100%; }
+    
+    .footer_inner { flex-direction: column; gap: 40px; }
+    .footer_info { width: 100%; }
+    
+    #quick_menu { right: 15px; bottom: 15px; }
+    #quick_menu .quick_btn { width: 80px; height: 80px; }
+    
+    .golf_card_wrap { grid-template-columns: 1fr; }
+  }
+
+  /* 모바일 태블릿 및 스마트폰 기기 최적화 (768px 이하) */
+  @media (max-width: 768px) {
+    .pc_only { display: none !important; }
+    
+    /* 섹션 기본 여백 축소 */
+    .sect_promise, .sect_benefits, .sect_product, .sect_golf, .sect_care, .sect_faq {
+      padding: 60px 0;
+    }
+    
+    /* 타이틀 크기 조정 */
+    .fs_48 { font-size: 2.8rem !important; }
+    .fs_32 { font-size: 2.2rem !important; }
+    .fs_28 { font-size: 1.8rem !important; }
+    .fs_24 { font-size: 1.8rem !important; }
+    .fs_20 { font-size: 1.5rem !important; }
+    
+    /* 메인 히어로 섹션 */
+    .main_hero {
+      padding-top: 120px;
+      padding-bottom: 40px;
+      min-height: auto;
+    }
+    .main_hero::before {
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(13, 59, 38, 0.95) 0%, rgba(13, 59, 38, 0.8) 100%);
+    }
+    .hero_content {
+      padding-bottom: 20px;
+    }
+    .hero_title {
+      font-size: 3.2rem !important;
+      line-height: 1.3;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .hero_sub {
+      font-size: 1.8rem !important;
+    }
+    .hero_desc {
+      font-size: 1.6rem !important;
+      line-height: 1.5;
+    }
+    .hero_list {
+      display: inline-block;
+      text-align: left;
+      margin: 25px auto 0;
+      font-size: 1.4rem !important;
+      max-width: 90%;
+    }
+    .hero_list li {
+      margin-bottom: 8px;
+    }
+    
+    /* Promises 섹션 */
+    .sect_promise .sect_tit {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .p_list_card {
+      padding: 25px 20px;
+    }
+    
+    /* 5대 혜택 Swiper */
+    .sect_benefits .sect_tit {
+      margin-bottom: 30px;
+    }
+    .nav_tab p.fs_24 {
+      font-size: 1.8rem !important;
+    }
+    .nav_tab p.fs_16 {
+      font-size: 1.3rem !important;
+    }
+    .slide_inner {
+      height: 380px;
+    }
+    .slide_overlay {
+      height: auto;
+      min-height: 150px;
+      padding: 20px;
+    }
+    .slide_overlay p.fs_32 {
+      font-size: 2.0rem !important;
+    }
+    .slide_overlay p.fs_18 {
+      font-size: 1.4rem !important;
+      line-height: 1.5;
+    }
+    .slide_overlay a {
+      padding: 6px 15px !important;
+      font-size: 1.3rem;
+    }
+    .rolling_text_wrap {
+      height: auto;
+      min-height: 60px;
+    }
+    .rolling_item {
+      font-size: 1.3rem !important;
+      line-height: 1.5;
+    }
+    
+    /* 상품 안내 섹션 */
+    .prod_card {
+      padding: 30px 20px;
+    }
+    .prod_card p.fs_48 {
+      font-size: 2.8rem !important;
+    }
+    .prod_card p.fs_22 {
+      font-size: 1.6rem !important;
+      margin-bottom: 25px;
+    }
+    .prod_price_box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding-top: 20px;
+    }
+    .prod_price_box .price_info {
+      text-align: center;
+    }
+    .prod_price_box .price_info p {
+      font-size: 1.6rem !important;
+    }
+    .prod_price_box .price_info p span.fs_24 {
+      font-size: 2.0rem !important;
+    }
+    .prod_price_box .price_info p span.fs_16 {
+      font-size: 1.2rem !important;
+      display: block;
+      margin-top: 4px;
+    }
+    .prod_price_box .total_price {
+      text-align: center;
+    }
+    .prod_price_box .total_price p.fs_64 {
+      font-size: 4.2rem !important;
+    }
+    .prod_refund {
+      margin-top: 25px;
+      padding: 15px 10px !important;
+    }
+    .prod_refund p.fs_24 {
+      font-size: 1.8rem !important;
+    }
+    .prod_refund p.fs_18 {
+      font-size: 1.4rem !important;
+    }
+    
+    /* 골프 특별 혜택 */
+    .sect_golf .sect_tit {
+      margin-bottom: 40px !important;
+    }
+    
+    /* FAQ 아코디언 */
+    .sect_faq .sect_tit {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact_info {
+      padding: 20px 15px !important;
+    }
+    .contact_info p.fs_24 {
+      font-size: 1.8rem !important;
+      margin-bottom: 15px !important;
+      text-align: center;
+    }
+    .contact_info ul li {
+      font-size: 1.5rem !important;
+    }
+    .contact_info ul li span.fs_22 {
+      font-size: 1.8rem !important;
+    }
+    .contact_info ul li span.fs_20 {
+      font-size: 1.6rem !important;
+    }
+    .accord_btn {
+      padding: 20px 15px;
+    }
+    .accord_btn span.fs_22 {
+      font-size: 1.6rem !important;
+    }
+    .accord_desc p.fs_18 {
+      font-size: 1.4rem !important;
+      line-height: 1.6;
+    }
+    .accord_item.active .accord_desc {
+      max-height: 500px; /* 모바일에서 글자가 길어져도 다 노출되도록 상향 */
+      padding: 20px 15px;
+    }
+    
+    /* 푸터 */
+    .footer {
+      padding: 50px 0 30px;
+    }
+    .footer_inner {
+      text-align: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .footer_info p.fs_24 {
+      font-size: 2.0rem !important;
+    }
+    .footer_info p.fs_16 {
+      font-size: 1.4rem !important;
+    }
+    .footer_actions {
+      width: 100%;
+      align-items: center;
+    }
+    
+    /* 퀵메뉴 플로팅 버튼 모바일 대응 */
+    #quick_menu {
+      right: 15px;
+      bottom: 20px;
+      gap: 10px;
+    }
+    #quick_menu .quick_btn {
+      width: 70px;
+      height: 70px;
+    }
+    #quick_menu .quick_btn i {
+      font-size: 2.0rem;
+    }
+    #quick_menu .quick_btn p {
+      font-size: 1.1rem;
+    }
+    #quick_menu .quick_btn p span.fs_12 {
+      font-size: 0.9rem !important;
+    }
+    #quick_menu .top_btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.6rem;
+    }
+  }
+
+  /* 초소형 모바일 기기 최적화 (480px 이하) */
+  @media (max-width: 480px) {
+    /* 골프 혜택 카드 세로 정렬 및 중앙 정렬 */
+    .golf_card {
+      flex-direction: column;
+      text-align: center;
+      padding: 25px 20px;
+    }
+    .golf_thumb {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 90px;
+      height: 90px;
+    }
+    .golf_text p.fs_24 {
+      font-size: 1.8rem !important;
+    }
+    .golf_text p.fs_16 {
+      font-size: 1.4rem !important;
+    }
+    
+    /* Swiper 슬라이드 높이 추가 조정 */
+    .slide_inner {
+      height: 320px;
+    }
+    .slide_overlay {
+      min-height: 140px;
+      padding: 15px;
+    }
+    .slide_overlay p.fs_32 {
+      font-size: 1.8rem !important;
+    }
+    .slide_overlay p.fs_18 {
+      font-size: 1.3rem !important;
+    }
+    .rolling_text_wrap {
+      min-height: 50px;
+    }
+    
+    /* Swiper 탭 글자 숨기거나 극도로 간소화 */
+    .nav_tab {
+      padding: 10px 12px;
+    }
+    .nav_tab p.fs_24 {
+      font-size: 1.5rem !important;
+    }
+    .nav_tab p.fs_16 {
+      display: none; /* 초소형 기기에서는 보조 텍스트 숨김 */
+    }
+  }
+
