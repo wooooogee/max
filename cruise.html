@@ -614,6 +614,226 @@
       color: #0b1120;
       box-shadow: 0 4px 15px rgba(201, 162, 79, 0.4);
     }
+
+    /* Lucky Draw QR Action Bar */
+    .lucky_qr_action_bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .qr_action_btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+    }
+    .qr_action_btn.primary {
+      background: linear-gradient(135deg, #c9a24f 0%, #b8860b 100%);
+      color: #0b1120;
+      border: 1px solid #c9a24f;
+    }
+    .qr_action_btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 162, 79, 0.4);
+    }
+    .qr_action_btn.secondary {
+      background: #0b1120;
+      color: #ffffff;
+      border: 1.5px solid var(--gold);
+    }
+    .qr_action_btn.secondary:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+    .qr_action_btn.outline {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1.5px solid #cbd5e1;
+    }
+    .qr_action_btn.outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+    .qr_badge_pill {
+      background: rgba(0, 0, 0, 0.15);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .qr_action_btn.secondary .qr_badge_pill {
+      background: var(--gold);
+      color: #0b1120;
+    }
+
+    /* QR Presentation Modals */
+    .qr_modal_backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      padding: 16px;
+    }
+    .qr_modal_backdrop.active {
+      display: flex;
+    }
+    .qr_modal_content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 520px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      border: 2px solid var(--gold);
+      animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalScaleUp {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .qr_modal_header {
+      background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--gold);
+    }
+    .qr_modal_title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .qr_modal_close {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .qr_modal_close:hover {
+      color: #ffffff;
+    }
+    .qr_modal_body {
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .qr_screen_box {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 20px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+    .qr_canvas_holder {
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .qr_canvas_holder img, .qr_canvas_holder canvas {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .qr_guide_text {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .qr_url_box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 16px;
+      word-break: break-all;
+    }
+    .qr_live_counter {
+      background: #fefce8;
+      border: 1.5px solid #fef08a;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 15px;
+      color: #854d0e;
+      font-weight: 700;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .qr_live_counter strong {
+      color: #d97706;
+      font-size: 18px;
+    }
+    .qr_footer_btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* 실시간 토스트 알림 */
+    .qr_toast {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      background: #0f172a;
+      color: #ffffff;
+      border: 1.5px solid var(--gold);
+      padding: 14px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      display: none;
+      align-items: center;
+      gap: 12px;
+      z-index: 10001;
+      animation: toastSlide 0.3s ease;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    @keyframes toastSlide {
+      from { transform: translateX(50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
     .marble_stage_wrap {
       display: flex;
       flex-direction: column;
@@ -2829,6 +3049,23 @@
         <p class="fs_18 fc_muted">개인정보를 기입해 주신 소중한 고객님들을 위한 실시간 두근두근 행운의 추첨 이벤트입니다!</p>
       </div>
 
+      <!-- QR코드 전광판 제어 바 -->
+      <div class="lucky_qr_action_bar">
+        <button type="button" class="qr_action_btn primary" onclick="openLuckyQrModal()">
+          <i class="fa-solid fa-qrcode"></i>
+          <span>📱 럭키드로우 참가신청 QR코드</span>
+          <span class="qr_badge_pill">실시간 접수</span>
+        </button>
+        <button type="button" class="qr_action_btn secondary" onclick="openJoinQrModal()">
+          <i class="fa-solid fa-file-signature"></i>
+          <span>📝 크루즈 가입신청 QR코드</span>
+        </button>
+        <button type="button" class="qr_action_btn outline" onclick="openEntryListModal()">
+          <i class="fa-solid fa-users-viewfinder"></i>
+          <span>현장 신청자 명단 (<strong id="qrEntryCountHeader" style="color:var(--gold);">0</strong>명)</span>
+        </button>
+      </div>
+
       <!-- 추첨 방식 선택: 기본 vs 고급 (구슬 레이스) -->
       <div class="draw_type_switch_wrap">
         <div class="draw_type_switch">
@@ -2868,8 +3105,29 @@
 
           <!-- 모드 2: 고객명단 입력 모드 -->
           <div id="panelModeNames" class="lucky_input_group mb4" style="display:none;">
-            <label class="lucky_label">참가자 명단 (줄바꿈 또는 쉼표 구분)</label>
+            <div class="d_flex jc_sb ai_cen mb1">
+              <label class="lucky_label" style="margin-bottom:0;">참가자 명단 (줄바꿈 또는 쉼표 구분)</label>
+              <span class="fs_12 fc_muted">신청자: <strong id="qrEntryCountSub" style="color:#d97706;">0</strong>명</span>
+            </div>
+            
+            <div class="d_flex gap2 mb2 flex_wrap">
+              <button type="button" class="btn fs_12 px3 py1" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; border-radius:6px; font-weight:700; cursor:pointer;" onclick="applyQrEntriesToDraw()">
+                <i class="fa-solid fa-download mr1"></i> QR 신청자 불러오기
+              </button>
+              <button type="button" class="btn fs_12 px3 py1" style="background:#e2e8f0; color:#334155; border:1px solid #cbd5e1; border-radius:6px; font-weight:700; cursor:pointer;" onclick="generateSampleEntries()">
+                <i class="fa-solid fa-dice mr1"></i> 샘플 10명 생성
+              </button>
+              <button type="button" class="btn fs_12 px3 py1" style="background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; border-radius:6px; font-weight:700; cursor:pointer;" onclick="clearAllEntriesText()">
+                <i class="fa-solid fa-trash-can mr1"></i> 비우기
+              </button>
+            </div>
+
             <textarea id="inputParticipantsList" class="lucky_textarea" rows="4" placeholder="홍길동&#10;김철수&#10;이영희&#10;박지성 (전화 뒷자리 등)"></textarea>
+            
+            <label class="d_flex ai_cen gap2 mt2 cursor_pointer">
+              <input type="checkbox" id="checkAutoSyncQr" checked style="accent-color:var(--gold); width:16px; height:16px; cursor:pointer;">
+              <span class="fs_13 font_bold" style="color:#0f172a;">새로운 QR 신청자 접수 시 추첨 명단에 자동 반영</span>
+            </label>
             <span class="fc_muted fs_12 mt1 d_block">※ 참가자별 이름 구슬이 생성되어 레이스를 펼칩니다.</span>
           </div>
 
@@ -3045,6 +3303,156 @@
     </div>
   </div>
 
+  <!-- 1. 럭키드로우 참가신청 QR코드 전광판 모달 -->
+  <div class="qr_modal_backdrop" id="luckyQrModal">
+    <div class="qr_modal_content">
+      <div class="qr_modal_header">
+        <h4 class="qr_modal_title">
+          <i class="fa-solid fa-gift fc_gold"></i> 럭키드로우 현장 참가신청 QR
+        </h4>
+        <button type="button" class="qr_modal_close" onclick="closeLuckyQrModal()">&times;</button>
+      </div>
+      <div class="qr_modal_body">
+        <div class="qr_screen_box">
+          <div class="qr_canvas_holder" id="luckyQrCodeHolder">
+            <!-- Canvas QR rendered dynamically -->
+          </div>
+        </div>
+
+        <p class="qr_guide_text">
+          <strong class="fc_dark">스마트폰 기본 카메라</strong>로 화면의 QR코드를 스캔하여<br>
+          이름, 연락처를 입력하고 개인정보 동의 후 접수해 주세요!
+        </p>
+
+        <div class="qr_live_counter">
+          <i class="fa-solid fa-users fc_gold"></i>
+          <span>현재 참가 신청 완료: <strong id="modalLuckyQrCount">0</strong>명</span>
+        </div>
+
+        <div class="qr_url_box">
+          <span id="luckyQrUrlText" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">entry.html</span>
+          <button type="button" class="btn fs_12 px3 py1" style="background:#0b1120; color:var(--gold); border:1px solid var(--gold); border-radius:6px; font-weight:700; white-space:nowrap; cursor:pointer;" onclick="copyLuckyQrUrl()">
+            <i class="fa-solid fa-copy mr1"></i> 주소 복사
+          </button>
+        </div>
+
+        <div class="qr_footer_btns">
+          <button type="button" class="btn btn_gold fs_14 px5 py3" style="border-radius:10px; font-weight:800;" onclick="applyQrAndStartDraw()">
+            <i class="fa-solid fa-trophy mr1"></i> 이 명단으로 구슬 레이스 준비
+          </button>
+          <a href="entry.html" target="_blank" rel="noopener" class="btn btn_line fs_14 px4 py3" style="border-radius:10px; font-weight:700; text-decoration:none;">
+            <i class="fa-solid fa-arrow-up-right-from-square mr1"></i> 신청화면 테스트 ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 온라인 가입신청 QR코드 전광판 모달 -->
+  <div class="qr_modal_backdrop" id="joinQrModal">
+    <div class="qr_modal_content">
+      <div class="qr_modal_header">
+        <h4 class="qr_modal_title">
+          <i class="fa-solid fa-file-signature fc_gold"></i> 크루즈 멤버십 온라인 가입신청 QR
+        </h4>
+        <button type="button" class="qr_modal_close" onclick="closeJoinQrModal()">&times;</button>
+      </div>
+      <div class="qr_modal_body">
+        <div class="qr_screen_box">
+          <div class="qr_canvas_holder" id="joinQrCodeHolder">
+            <!-- Canvas QR rendered dynamically -->
+          </div>
+        </div>
+
+        <p class="qr_guide_text">
+          <strong class="fc_dark">스마트폰 기본 카메라</strong>로 화면의 QR코드를 스캔하시면<br>
+          HD투어존 크루즈 공식 온라인 가입 페이지로 즉시 연결됩니다.
+        </p>
+
+        <!-- 링크 수정 기능 (발표자가 원할 시 다른 프로모션 링크 적용 가능) -->
+        <div class="lucky_input_group mb3 ta_l">
+          <label class="lucky_label fs_13 mb1">가입신청 링크 URL (필요시 변경 가능)</label>
+          <div class="d_flex gap2">
+            <input type="text" id="inputJoinUrl" class="lucky_input fs_13" style="flex:1;" value="https://intranet.htourzone.co.kr/api/join/?s=20260090" oninput="updateJoinQrCode(this.value)">
+            <button type="button" class="btn fs_13 px3 py2" style="background:#0b1120; color:var(--gold); border:1px solid var(--gold); border-radius:8px; font-weight:700; white-space:nowrap; cursor:pointer;" onclick="copyJoinUrl()">
+              <i class="fa-solid fa-copy mr1"></i> 복사
+            </button>
+          </div>
+        </div>
+
+        <div class="qr_footer_btns">
+          <a href="https://intranet.htourzone.co.kr/api/join/?s=20260090" id="linkOpenJoinDirect" target="_blank" rel="noopener noreferrer" class="btn btn_gold fs_14 px6 py3" style="border-radius:10px; font-weight:800; text-decoration:none;">
+            <i class="fa-solid fa-arrow-up-right-from-square mr1"></i> 가입신청 페이지 바로 열기 ↗
+          </a>
+          <button type="button" class="btn btn_line fs_14 px5 py3" style="border-radius:10px; font-weight:700;" onclick="closeJoinQrModal()">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 현장 신청자 명단 확인 및 관리 모달 -->
+  <div class="qr_modal_backdrop" id="entryListModal">
+    <div class="qr_modal_content" style="max-width: 640px;">
+      <div class="qr_modal_header">
+        <h4 class="qr_modal_title">
+          <i class="fa-solid fa-users-viewfinder fc_gold"></i> 럭키드로우 현장 신청자 명단 관리
+        </h4>
+        <button type="button" class="qr_modal_close" onclick="closeEntryListModal()">&times;</button>
+      </div>
+      <div class="qr_modal_body" style="text-align: left;">
+        <div class="d_flex jc_sb ai_cen mb3">
+          <div>
+            <span class="fs_14 font_bold fc_dark">접수된 참가자: <strong id="modalListTotalCount" style="color:#d97706;">0</strong>명</span>
+            <span class="fs_12 fc_muted ml2">(개인정보 수집 동의 완료)</span>
+          </div>
+          <div class="d_flex gap2">
+            <button type="button" class="btn fs_12 px3 py1" style="background:#e2e8f0; color:#0f172a; border-radius:6px; font-weight:700; cursor:pointer;" onclick="generateSampleEntries()">
+              + 샘플 10명
+            </button>
+            <button type="button" class="btn fs_12 px3 py1" style="background:#fee2e2; color:#b91c1c; border-radius:6px; font-weight:700; cursor:pointer;" onclick="clearAllQrEntries()">
+              전체 삭제
+            </button>
+          </div>
+        </div>
+
+        <div style="max-height: 320px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 20px;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+            <thead>
+              <tr style="background: #f8fafc; border-bottom: 1.5px solid #cbd5e1; text-align: left; color: #475569;">
+                <th style="padding: 10px 12px; width: 45px;">No</th>
+                <th style="padding: 10px 12px;">성함</th>
+                <th style="padding: 10px 12px;">연락처</th>
+                <th style="padding: 10px 12px;">참석구분</th>
+                <th style="padding: 10px 12px;">접수시각</th>
+                <th style="padding: 10px 12px; text-align: center; width: 45px;">삭제</th>
+              </tr>
+            </thead>
+            <tbody id="entryTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="qr_footer_btns" style="justify-content: flex-end;">
+          <button type="button" class="btn btn_gold fs_14 px5 py3" style="border-radius:10px; font-weight:800;" onclick="applyQrEntriesToDraw(); closeEntryListModal();">
+            <i class="fa-solid fa-check mr1"></i> 이 명단 추첨에 적용하기
+          </button>
+          <button type="button" class="btn btn_line fs_14 px4 py3" style="border-radius:10px; font-weight:700;" onclick="closeEntryListModal()">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 실시간 접수 토스트 알림 -->
+  <div class="qr_toast" id="qrToast">
+    <i class="fa-solid fa-bell fc_gold fs_18"></i>
+    <span id="qrToastMsg">새로운 참가 신청이 접수되었습니다!</span>
+  </div>
+
   <!-- Cruise Footer -->
   <footer class="cruise_footer">
     <div class="wrap d_flex jc_sb ai_cen flex_wrap gap4">
@@ -3061,11 +3469,13 @@
     </div>
   </footer>
 
+  <!-- QR Code Generator Library -->
+  <script src="qrcode.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- Canvas Confetti (Fireworks for Lucky Draw) -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <!-- Cruise Script -->
-  <script src="cruise.js?v=4"></script>
+  <script src="cruise.js?v=5"></script>
 </body>
 </html>

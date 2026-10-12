@@ -1914,6 +1914,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // 7. QR 시스템 초기화 (참가신청 QR & 가입신청 QR)
+  initQrSystem();
+
 });
 
 // ----------------------------------------------------------------------------
@@ -1932,5 +1935,369 @@ function switchItinTab(tabId) {
   const activeBtn = Array.from(allBtns).find(btn => btn.getAttribute('onclick')?.includes(tabId));
   if (activeBtn) activeBtn.classList.add('active');
 }
+
+// ============================================================================
+// [QR Code 시스템] 럭키드로우 참가신청 QR & 온라인 가입신청 QR
+// ============================================================================
+let luckyQrCodeInstance = null;
+let joinQrCodeInstance = null;
+let qrBroadcastChannel = null;
+
+function initQrSystem() {
+  updateQrEntryCountDisplays();
+
+  // 1. BroadcastChannel 및 LocalStorage 변경 감지 (실시간 참가 접수)
+  try {
+    if ('BroadcastChannel' in window) {
+      qrBroadcastChannel = new BroadcastChannel('lucky_draw_channel');
+      qrBroadcastChannel.onmessage = (event) => {
+        if (event.data && event.data.type === 'NEW_ENTRY') {
+          handleIncomingQrEntry(event.data.data);
+        }
+      };
+    }
+  } catch (e) {
+    console.warn('BroadcastChannel not supported:', e);
+  }
+
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'lucky_draw_entries') {
+      updateQrEntryCountDisplays();
+      renderEntryTable();
+    }
+  });
+
+  // ESC 키로 QR 모달 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLuckyQrModal();
+      closeJoinQrModal();
+      closeEntryListModal();
+    }
+  });
+
+  // 모달 배경 클릭 시 닫기
+  ['luckyQrModal', 'joinQrModal', 'entryListModal'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', (e) => {
+        if (e.target === el) {
+          el.classList.remove('active');
+        }
+      });
+    }
+  });
+}
+
+// 실시간 참가자 수 갱신
+function getStoredQrEntries() {
+  try {
+    return JSON.parse(localStorage.getItem('lucky_draw_entries') || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function updateQrEntryCountDisplays() {
+  const entries = getStoredQrEntries();
+  const count = entries.length;
+
+  const headerCnt = document.getElementById('qrEntryCountHeader');
+  const subCnt = document.getElementById('qrEntryCountSub');
+  const modalCnt = document.getElementById('modalLuckyQrCount');
+  const listModalCnt = document.getElementById('modalListTotalCount');
+
+  if (headerCnt) headerCnt.textContent = count;
+  if (subCnt) subCnt.textContent = count;
+  if (modalCnt) modalCnt.textContent = count;
+  if (listModalCnt) listModalCnt.textContent = count;
+}
+
+// 실시간 접수 메시지 처리
+function handleIncomingQrEntry(entry) {
+  updateQrEntryCountDisplays();
+  renderEntryTable();
+
+  showQrToast(`🎉 [${entry.name}]님이 럭키드로우에 참가 신청하셨습니다!`);
+
+  // 자동 반영 옵션이 켜져 있는 경우
+  const autoSyncCheck = document.getElementById('checkAutoSyncQr');
+  if (autoSyncCheck && autoSyncCheck.checked) {
+    appendEntryToDrawList(entry);
+  }
+}
+
+function appendEntryToDrawList(entry) {
+  const inputList = document.getElementById('inputParticipantsList');
+  if (!inputList) return;
+
+  const phoneTail = entry.phone ? entry.phone.slice(-4) : '';
+  const label = phoneTail ? `${entry.name}(${phoneTail})` : entry.name;
+
+  let current = inputList.value.trim();
+  const lines = current ? current.split('\n').map(l => l.trim()).filter(Boolean) : [];
+
+  if (!lines.includes(label)) {
+    lines.push(label);
+    inputList.value = lines.join('\n');
+
+    // 고객명단 모드로 자동 전환 및 구슬 생성
+    if (luckyDrawMode !== 'names') {
+      setDrawMode('names');
+    } else if (!isMarbleRacing && currentDrawType === 'advanced') {
+      setupMarbles();
+      drawMarbleCourse();
+    }
+  }
+}
+
+// --- 1. 럭키드로우 참가신청 QR 모달 ---
+function getLuckyEntryUrl() {
+  try {
+    // 현재 URL 위치 기준 entry.html 절대 경로 생성
+    return new URL('entry.html', window.location.href).href;
+  } catch (e) {
+    return window.location.origin + '/entry.html';
+  }
+}
+
+function openLuckyQrModal() {
+  const modal = document.getElementById('luckyQrModal');
+  if (!modal) return;
+
+  const url = getLuckyEntryUrl();
+  const urlText = document.getElementById('luckyQrUrlText');
+  if (urlText) urlText.textContent = url;
+
+  updateQrEntryCountDisplays();
+
+  const holder = document.getElementById('luckyQrCodeHolder');
+  if (holder) {
+    holder.innerHTML = '';
+    if (typeof QRCode !== 'undefined') {
+      luckyQrCodeInstance = new QRCode(holder, {
+        text: url,
+        width: 240,
+        height: 240,
+        colorDark: '#0b1120',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    } else {
+      // Fallback
+      holder.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(url)}" alt="QR Code" style="width:240px;height:240px;">`;
+    }
+  }
+
+  modal.classList.add('active');
+}
+
+function closeLuckyQrModal() {
+  const modal = document.getElementById('luckyQrModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function copyLuckyQrUrl() {
+  const url = getLuckyEntryUrl();
+  navigator.clipboard.writeText(url).then(() => {
+    showQrToast('📋 참가신청 링크가 클립보드에 복사되었습니다!');
+  }).catch(() => {
+    prompt('참가신청 주소를 복사하세요:', url);
+  });
+}
+
+function applyQrAndStartDraw() {
+  closeLuckyQrModal();
+  applyQrEntriesToDraw();
+
+  const section = document.getElementById('lucky-draw');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// --- 2. 크루즈 멤버십 온라인 가입신청 QR 모달 ---
+function openJoinQrModal() {
+  const modal = document.getElementById('joinQrModal');
+  if (!modal) return;
+
+  const inputUrl = document.getElementById('inputJoinUrl');
+  const url = inputUrl ? inputUrl.value.trim() : 'https://intranet.htourzone.co.kr/api/join/?s=20260090';
+
+  updateJoinQrCode(url);
+  modal.classList.add('active');
+}
+
+function closeJoinQrModal() {
+  const modal = document.getElementById('joinQrModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function updateJoinQrCode(url) {
+  if (!url) return;
+  const holder = document.getElementById('joinQrCodeHolder');
+  const directLink = document.getElementById('linkOpenJoinDirect');
+
+  if (directLink) directLink.href = url;
+
+  if (holder) {
+    holder.innerHTML = '';
+    if (typeof QRCode !== 'undefined') {
+      joinQrCodeInstance = new QRCode(holder, {
+        text: url,
+        width: 240,
+        height: 240,
+        colorDark: '#0b1120',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    } else {
+      holder.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(url)}" alt="QR Code" style="width:240px;height:240px;">`;
+    }
+  }
+}
+
+function copyJoinUrl() {
+  const inputUrl = document.getElementById('inputJoinUrl');
+  const url = inputUrl ? inputUrl.value.trim() : 'https://intranet.htourzone.co.kr/api/join/?s=20260090';
+  navigator.clipboard.writeText(url).then(() => {
+    showQrToast('📋 가입신청 링크가 클립보드에 복사되었습니다!');
+  }).catch(() => {
+    prompt('가입신청 링크를 복사하세요:', url);
+  });
+}
+
+// --- 3. 현장 신청자 명단 확인 & 관리 모달 ---
+function openEntryListModal() {
+  const modal = document.getElementById('entryListModal');
+  if (!modal) return;
+
+  renderEntryTable();
+  updateQrEntryCountDisplays();
+  modal.classList.add('active');
+}
+
+function closeEntryListModal() {
+  const modal = document.getElementById('entryListModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function renderEntryTable() {
+  const tbody = document.getElementById('entryTableBody');
+  if (!tbody) return;
+
+  const entries = getStoredQrEntries();
+  if (entries.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding:30px; color:#94a3b8;">아직 접수된 현장 신청자가 없습니다.<br>QR코드를 스캔하여 신청하거나, 상단 [+ 샘플 10명]으로 테스트해 보세요!</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = entries.map((item, idx) => `
+    <tr style="border-bottom: 1px solid #f1f5f9;">
+      <td style="padding: 9px 12px; font-weight: 700; color:#64748b;">${idx + 1}</td>
+      <td style="padding: 9px 12px; font-weight: 700; color:#0f172a;">${item.name}</td>
+      <td style="padding: 9px 12px; color:#334155;">${item.phoneMasked || item.phone}</td>
+      <td style="padding: 9px 12px;"><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700;">${item.attend || '현장참석'}</span></td>
+      <td style="padding: 9px 12px; color:#64748b; font-size:12px;">${item.time || '-'}</td>
+      <td style="padding: 9px 12px; text-align: center;">
+        <button type="button" onclick="deleteQrEntry('${item.id}')" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:13px;" title="삭제">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function deleteQrEntry(id) {
+  let entries = getStoredQrEntries();
+  entries = entries.filter(e => e.id !== id);
+  localStorage.setItem('lucky_draw_entries', JSON.stringify(entries));
+  renderEntryTable();
+  updateQrEntryCountDisplays();
+}
+
+function clearAllQrEntries() {
+  if (!confirm('등록된 현장 신청자 명단을 모두 삭제하시겠습니까?')) return;
+  localStorage.removeItem('lucky_draw_entries');
+  renderEntryTable();
+  updateQrEntryCountDisplays();
+  showQrToast('신청자 명단이 모두 삭제되었습니다.');
+}
+
+function clearAllEntriesText() {
+  const inputList = document.getElementById('inputParticipantsList');
+  if (inputList) {
+    inputList.value = '';
+    if (!isMarbleRacing && currentDrawType === 'advanced' && luckyDrawMode === 'names') {
+      setupMarbles();
+      drawMarbleCourse();
+    }
+  }
+}
+
+// 명단에 주입하기
+function applyQrEntriesToDraw() {
+  const entries = getStoredQrEntries();
+  if (entries.length === 0) {
+    alert('접수된 현장 신청자가 없습니다. QR코드를 통해 접수하거나 샘플 참가자를 생성해 보세요.');
+    return;
+  }
+
+  const lines = entries.map(item => {
+    const tail = item.phone ? item.phone.slice(-4) : '';
+    return tail ? `${item.name}(${tail})` : item.name;
+  });
+
+  const inputList = document.getElementById('inputParticipantsList');
+  if (inputList) {
+    inputList.value = lines.join('\n');
+    setDrawMode('names');
+    showQrToast(`✅ 신청자 ${entries.length}명이 럭키드로우에 등록되었습니다!`);
+  }
+}
+
+// 테스트용 샘플 10명 생성
+function generateSampleEntries() {
+  const sampleNames = ['김민준', '이서연', '박도윤', '최지우', '정하은', '한예준', '유시아', '강동현', '임수아', '조현우'];
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+
+  const current = getStoredQrEntries();
+  sampleNames.forEach((name, i) => {
+    const random4 = Math.floor(1000 + Math.random() * 9000);
+    current.push({
+      id: 'sample_' + Date.now() + '_' + i,
+      name: name,
+      phone: `010-${Math.floor(2000 + Math.random() * 8000)}-${random4}`,
+      phoneMasked: `010-****-${random4}`,
+      attend: '현장참석',
+      time: timeStr,
+      timestamp: Date.now()
+    });
+  });
+
+  localStorage.setItem('lucky_draw_entries', JSON.stringify(current));
+  updateQrEntryCountDisplays();
+  renderEntryTable();
+  applyQrEntriesToDraw();
+  showQrToast(`🎲 테스트용 샘플 참가자 10명이 생성되어 명단에 등록되었습니다!`);
+}
+
+// 실시간 토스트 알림창
+let toastTimer = null;
+function showQrToast(msg) {
+  const toast = document.getElementById('qrToast');
+  const msgEl = document.getElementById('qrToastMsg');
+  if (!toast || !msgEl) return;
+
+  msgEl.textContent = msg;
+  toast.style.display = 'flex';
+
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.style.display = 'none';
+  }, 3500);
+}
+
 
 
