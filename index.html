@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="index.css?v=39">
+  <link rel="stylesheet" href="index.css?v=40">
 
   <!-- Danggeun Market Code -->
   <script src="https://karrot-pixel.business.daangn.com/karrot-pixel.js"></script>
@@ -35,12 +35,24 @@
       <a href="#" class="logo">
         <span class="logo_text">더좋은라이프 <strong>맥스지사</strong></span>
       </a>
-      <!-- 우측 카톡/전화번호 삭제됨 -->
+      <!-- 상단 헤더 버튼 미노출 (우측 퀵메뉴 바만 유지) -->
     </div>
   </header>
 
   <!-- Quick Menu -->
   <nav id="quick_menu">
+    <a href="hybrid698.html" class="quick_btn" style="background:#0f172a; border:1px solid #22c55e;" title="하이브리드698 교육자료">
+      <div class="inner_ctr">
+        <i class="fa-solid fa-graduation-cap icon" style="color:#22c55e;"></i>
+        <p style="color:#ffffff;">하이브리드<br><span class="fs_12" style="color:#22c55e;">교육자료</span></p>
+      </div>
+    </a>
+    <a href="cruise.html" class="quick_btn" style="background:#0b1120; border:1px solid var(--gold);" title="크루즈 설명회 자료 및 가입">
+      <div class="inner_ctr">
+        <i class="fa-solid fa-ship icon" style="color:var(--gold);"></i>
+        <p style="color:#ffffff;">크루즈안내<br><span class="fs_12" style="color:var(--gold);">자료보기</span></p>
+      </div>
+    </a>
     <a href="tel:01095098701" class="quick_btn">
       <div class="inner_ctr">
         <i class="fa-solid fa-phone-volume icon"></i>
@@ -181,7 +193,10 @@
             <div class="slide_inner">
               <img src="lifecare.png" alt="라이프케어 전환">
               <div class="slide_overlay bg_dark_opacity">
-                <p class="fs_32 font_bold fc_gold mb2">라이프케어 전환</p>
+                <div class="d_flex jc_sb ai_cen mb4">
+                  <p class="fs_32 font_bold fc_gold">라이프케어 전환 (크루즈/웨딩)</p>
+                  <a href="cruise.html" style="display:inline-block; padding: 8px 20px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; text-decoration: none; transition: 0.3s;" onmouseover="this.style.background='var(--gold)'; this.style.color='var(--dark)';" onmouseout="this.style.background='transparent'; this.style.color='var(--gold)';">크루즈 자료보기 <i class="fa-solid fa-chevron-right fs_12 ml2"></i></a>
+                </div>
                 <p class="fs_18 fc_white lh_1_6">인생에서 가장 찬란한 순간을 디자인하세요. 최고급 크루즈 투어, 프라이빗 웨딩 패키지 등으로 서비스 전환이 언제나 열려 있습니다.</p>
               </div>
             </div>
@@ -231,6 +246,15 @@
         <div class="prod_refund bg_gray mt8 ta_cen py4 rounded">
           <p class="fs_24 font_bold fc_primary_green mb1">만기시 총납입금 100% 환급</p>
           <p class="fs_18 fc_muted">(가전렌탈료는 만기축하금으로 드립니다)</p>
+        </div>
+
+        <div class="ta_cen mt6 d_flex jc_cen gap3 flex_wrap">
+          <a href="hybrid698.html" class="btn fs_18 px8 py4" style="background:linear-gradient(135deg, #10b981, #059669); color:#fff; border-radius:35px; font-weight:800; display:inline-flex; align-items:center; gap:8px; box-shadow:0 8px 25px rgba(16,185,129,0.35); text-decoration:none; transition:0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            <i class="fa-solid fa-graduation-cap"></i> 하이브리드698 교육자료 보기 ↗
+          </a>
+          <a href="tel:01095098701" class="btn fs_18 px8 py4" style="background:#0b1120; color:var(--gold); border:2px solid var(--gold); border-radius:35px; font-weight:800; display:inline-flex; align-items:center; gap:8px; text-decoration:none; transition:0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            <i class="fa-solid fa-phone-volume"></i> 가입 및 혜택 상담문의
+          </a>
         </div>
       </div>
     </div>
@@ -371,6 +395,6 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="app.js"></script>
+  <script src="app.js?v=40"></script>
 </body>
 </html>

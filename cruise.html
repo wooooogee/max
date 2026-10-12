@@ -1,0 +1,3071 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HD투어존 럭셔리 크루즈 멤버십 안내관 | 더좋은라이프 맥스지사</title>
+  <meta name="description" content="HD투어존 x 더좋은라이프 맥스지사 럭셔리 크루즈 멤버십 상세 설명회, 교육 프레젠테이션 및 공식 홍보영상 자료관">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="index.css?v=42">
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .cruise_header {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      padding: 14px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+    .cruise_header .logo_text {
+      color: #0f172a !important;
+    }
+    .header_menu_group {
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      gap: 8px !important;
+    }
+    .nav_link_btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #475569;
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 600;
+      padding: 7px 11px;
+      border-radius: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .nav_link_btn:hover {
+      color: #0f172a;
+      background: #f1f5f9;
+    }
+    .btn_online_join {
+      white-space: nowrap !important;
+      font-size: 1.35rem !important;
+      padding: 7px 16px !important;
+    }
+    .back_to_home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #475569;
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 600;
+      padding: 7px 13px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .back_to_home:hover {
+      color: #0f172a;
+      background: #f8fafc;
+      border-color: var(--gold);
+    }
+    .cruise_hero_banner {
+      padding: 50px 0 30px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+    .cruise_badge {
+      display: inline-block;
+      padding: 6px 18px;
+      background: #ffffff;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      color: #b4842a;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(201, 162, 79, 0.15);
+    }
+    .cruise_main_title {
+      font-size: 3.6rem;
+      font-weight: 900;
+      color: #0f172a !important;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .cruise_main_sub {
+      font-size: 1.7rem;
+      color: #475569 !important;
+      line-height: 1.6;
+    }
+    .viewer_section {
+      padding: 15px 0 60px;
+    }
+    .pres_card_dark {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+    }
+    .pres_toolbar_dark {
+      padding: 14px 22px;
+      background: #ffffff !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .pres_pagination {
+      color: #0f172a !important;
+    }
+    .pres_fullscreen_btn {
+      background: #f8fafc !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #1e293b !important;
+    }
+    .pres_fullscreen_btn:hover {
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+    .pres_footer_bar_dark {
+      padding: 20px 26px;
+      background: #f8fafc !important;
+      border-top: 1px solid #e2e8f0 !important;
+    }
+    .pres_footer_bar_dark p.fc_white {
+      color: #0f172a !important;
+    }
+    .pres_footer_bar_dark p.fc_muted {
+      color: #64748b !important;
+    }
+    .pres_thumbs_box_dark {
+      padding: 14px 18px;
+      background: #f1f5f9 !important;
+      border-top: 1px solid #e2e8f0 !important;
+    }
+    
+    /* 슬라이드 내부 퀵 비디오 버튼 */
+    .slide_video_quick_btn {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 2px solid var(--gold);
+      color: #ffffff;
+      padding: 11px 20px;
+      border-radius: 30px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: all 0.25s ease;
+      z-index: 5;
+    }
+    .slide_video_quick_btn:hover {
+      background: var(--gold);
+      color: #0b1120;
+      transform: translateY(-2px);
+    }
+
+    /* Video Showcase Section */
+    .video_section {
+      padding: 70px 0;
+      border-top: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+    .video_section h2 {
+      color: #0f172a !important;
+    }
+    .video_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .video_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .video_card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .video_card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    .video_thumb_box {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #0b1120;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .video_thumb_box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .video_card:hover .video_thumb_box img {
+      transform: scale(1.04);
+    }
+    .video_play_overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    .video_play_btn {
+      width: 58px;
+      height: 58px;
+      background: var(--gold);
+      color: #0b1120;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      padding-left: 4px;
+      box-shadow: 0 4px 20px rgba(201, 162, 79, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .video_thumb_box:hover .video_play_overlay {
+      background: rgba(15, 23, 42, 0.15);
+    }
+    .video_thumb_box:hover .video_play_btn {
+      transform: scale(1.15);
+    }
+    .video_badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fce085;
+      border: 1px solid rgba(201, 162, 79, 0.5);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+    .video_duration {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .video_content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .video_title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0f172a !important;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .video_desc {
+      font-size: 1.4rem;
+      color: #64748b !important;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .video_action_btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .video_action_btn:hover {
+      background: var(--gold);
+      color: #0b1120;
+      border-color: var(--gold);
+    }
+
+    /* Resource Download Section */
+    .resource_section {
+      padding: 70px 0;
+      border-top: 1px solid #e2e8f0;
+      background: #f8fafc;
+    }
+    .resource_section h2 {
+      color: #0f172a !important;
+    }
+    .resource_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .resource_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .resource_card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .resource_card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    }
+    .resource_card h3 {
+      color: #0f172a !important;
+    }
+    .resource_card p {
+      color: #64748b !important;
+    }
+    .res_icon_box {
+      width: 56px;
+      height: 56px;
+      background: rgba(201, 162, 79, 0.12);
+      border: 1px solid rgba(201, 162, 79, 0.3);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      color: #b4842a;
+      margin-bottom: 18px;
+    }
+
+    /* Video Modal */
+    .video_modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+    .video_modal.active {
+      display: flex;
+    }
+    .video_modal_box {
+      width: 100%;
+      max-width: 960px;
+      background: #0f172a;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+    .video_modal_header {
+      padding: 14px 20px;
+      background: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .video_modal_close {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 2.2rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      transition: color 0.2s;
+    }
+    .video_modal_close:hover {
+      color: #ffffff;
+    }
+    .modal_video_wrapper {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+    }
+    .modal_video_wrapper video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .modal_video_controls {
+      padding: 12px 20px;
+      background: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .video_ctrl_group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .video_ctrl_btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .video_ctrl_btn:hover {
+      background: var(--gold);
+      color: #0b1120;
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .video_ctrl_btn.primary {
+      background: var(--gold);
+      color: #0b1120;
+      border-color: var(--gold);
+    }
+    .video_ctrl_btn.primary:hover {
+      background: #d8b05c;
+    }
+    .video_speed_select {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      outline: none;
+    }
+    .video_speed_select option {
+      background: #1e293b;
+      color: #fff;
+    }
+    .seek_indicator {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.78);
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+      z-index: 10;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .seek_indicator.left { left: 15%; }
+    .seek_indicator.right { right: 15%; }
+    .seek_indicator.show {
+      display: inline-flex;
+      animation: popFade 0.6s ease forwards;
+    }
+    @keyframes popFade {
+      0% { opacity: 0; transform: translateY(-50%) scale(0.8); }
+      30% { opacity: 1; transform: translateY(-50%) scale(1.1); }
+      70% { opacity: 1; transform: translateY(-50%) scale(1); }
+      100% { opacity: 0; transform: translateY(-50%) scale(0.9); }
+    }
+
+    /* Join CTA Section */
+    .join_cta_section {
+      padding: 65px 0;
+      background: #f1f5f9;
+      border-top: 1px solid #e2e8f0;
+    }
+    .join_cta_card {
+      background: linear-gradient(135deg, #ffffff 0%, #fffdf5 100%);
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      padding: 45px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(201, 162, 79, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    .join_cta_card h2 {
+      color: #0f172a !important;
+    }
+    .join_cta_card p {
+      color: #475569 !important;
+    }
+    .btn_gold_glow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fce085 0%, #c9a24f 50%, #997529 100%);
+      color: #0b1120 !important;
+      font-weight: 800;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(201, 162, 79, 0.45);
+      border: 1px solid #ffe8a1;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn_gold_glow:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(201, 162, 79, 0.7);
+      background: linear-gradient(135deg, #ffffff 0%, #fce085 40%, #c9a24f 100%);
+    }
+
+    /* Lucky Draw Section */
+    .lucky_draw_section {
+      padding: 80px 0;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+    .lucky_draw_section h2 {
+      color: #0f172a !important;
+    }
+    .lucky_draw_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .draw_type_switch_wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .draw_type_switch {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 6px;
+      border-radius: 40px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    .draw_type_btn {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .draw_type_btn.active {
+      background: var(--gold);
+      color: #0b1120;
+      box-shadow: 0 4px 15px rgba(201, 162, 79, 0.4);
+    }
+    .marble_stage_wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .marble_race_box {
+      position: relative;
+      background: #060a12;
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(201, 162, 79, 0.25);
+    }
+    .marble_canvas {
+      width: 100%;
+      height: 520px;
+      display: block;
+      background: radial-gradient(circle at center, #0a1324 0%, #03060d 100%);
+    }
+    .marble_event_badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .event_pill {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      backdrop-filter: blur(4px);
+    }
+    .event_pill.slider { border-color: #38bdf8; color: #7dd3fc; }
+    .event_pill.pendulum { border-color: #eab308; color: #fde047; }
+    .event_pill.bump { border-color: #f43f5e; color: #fda4af; }
+    .event_pill.boost { border-color: #10b981; color: #a7f3d0; }
+    .marble_live_board {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(201, 162, 79, 0.4);
+      border-radius: 12px;
+      padding: 10px 14px;
+      backdrop-filter: blur(6px);
+      min-width: 150px;
+      z-index: 5;
+    }
+    .marble_live_item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      padding: 3px 0;
+      color: #cbd5e1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .marble_live_item:last-child { border-bottom: none; }
+    .marble_live_rank {
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .marble_live_name {
+      font-weight: 700;
+      color: #fff;
+    }
+    .lucky_box {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 30px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    }
+    /* Lucky Draw Fullscreen Styling */
+    .lucky_fullscreen_target {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .lucky_fullscreen_target:fullscreen,
+    .lucky_fullscreen_target:-webkit-full-screen {
+      background: #080d19 !important;
+      padding: 24px 30px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      box-sizing: border-box !important;
+      overflow-y: auto !important;
+      z-index: 99999 !important;
+    }
+    .lucky_fullscreen_target:fullscreen .marble_stage_wrap,
+    .lucky_fullscreen_target:-webkit-full-screen .marble_stage_wrap,
+    .lucky_fullscreen_target:fullscreen .lucky_stage,
+    .lucky_fullscreen_target:-webkit-full-screen .lucky_stage {
+      width: 100% !important;
+      max-width: 1100px !important;
+      margin: 0 auto !important;
+    }
+    .lucky_fullscreen_target:fullscreen .marble_canvas,
+    .lucky_fullscreen_target:-webkit-full-screen .marble_canvas {
+      height: 64vh !important;
+      max-height: 720px !important;
+    }
+    .lucky_fullscreen_target:fullscreen .lucky_rolling_area,
+    .lucky_fullscreen_target:-webkit-full-screen .lucky_rolling_area {
+      min-height: 280px !important;
+    }
+    .lucky_fullscreen_target:fullscreen .lucky_slot_text,
+    .lucky_fullscreen_target:-webkit-full-screen .lucky_slot_text {
+      font-size: 8rem !important;
+    }
+    .lucky_fs_header_bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+    .lucky_fs_toggle_btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .lucky_fs_toggle_btn:hover {
+      background: var(--gold);
+      color: #0b1120;
+      border-color: var(--gold);
+    }
+    .lucky_fs_close_btn {
+      position: fixed;
+      top: 20px;
+      right: 25px;
+      z-index: 10000;
+      display: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .lucky_fullscreen_target:fullscreen .lucky_fs_close_btn,
+    .lucky_fullscreen_target:-webkit-full-screen .lucky_fs_close_btn {
+      display: inline-flex !important;
+    }
+    .lucky_settings {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .lucky_tab_btn {
+      flex: 1;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #64748b;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lucky_tab_btn.active {
+      background: var(--gold);
+      color: #0b1120;
+      border-color: var(--gold);
+    }
+    .lucky_label {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+    .lucky_input, .lucky_textarea {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #0f172a;
+      font-size: 1.4rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .lucky_input:focus, .lucky_textarea:focus {
+      border-color: var(--gold);
+    }
+    .lucky_textarea {
+      width: 100%;
+      resize: vertical;
+    }
+    .lucky_btn_sub {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lucky_btn_sub:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .lucky_stage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .lucky_display_board {
+      background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 35px 25px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+    .lucky_status_badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(201, 162, 79, 0.15);
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      color: #b4842a;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .lucky_rolling_area {
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    .lucky_slot_box {
+      background: #0f172a;
+      border: 2px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 15px 40px;
+      display: inline-block;
+      min-width: 260px;
+      box-shadow: inset 0 6px 15px rgba(0,0,0,0.5);
+    }
+    .lucky_slot_text {
+      font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+      font-size: 5.2rem;
+      font-weight: 900;
+      color: #fce085;
+      text-shadow: 0 0 20px rgba(252, 224, 133, 0.6);
+      letter-spacing: 2px;
+    }
+    .lucky_slot_text.rolling {
+      animation: slotPulse 0.1s infinite alternate;
+      color: #ffffff;
+      text-shadow: 0 0 15px #ffffff;
+    }
+    @keyframes slotPulse {
+      0% { transform: scale(0.96); opacity: 0.8; }
+      100% { transform: scale(1.04); opacity: 1; }
+    }
+    .lucky_current_prize {
+      margin-top: 15px;
+      font-size: 1.8rem;
+      color: #0f172a;
+      font-weight: 700;
+      min-height: 28px;
+    }
+    .lucky_start_btn {
+      background: linear-gradient(135deg, #fce085 0%, #c9a24f 50%, #997529 100%);
+      color: #0b1120;
+      border: none;
+      padding: 16px 45px;
+      border-radius: 40px;
+      font-size: 2.0rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(201, 162, 79, 0.4);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lucky_start_btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(201, 162, 79, 0.6);
+    }
+    .lucky_start_btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .lucky_winners_list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      max-height: 240px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+    .winner_item_card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: fadeInPop 0.5s ease;
+    }
+    @keyframes fadeInPop {
+      0% { opacity: 0; transform: scale(0.7); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .winner_rank_badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #0b1120;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .winner_info_text p.winner_target {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .winner_info_text p.winner_prize {
+      font-size: 1.2rem;
+      color: #b4842a;
+      font-weight: 600;
+    }
+    .lucky_copy_btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .lucky_copy_btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* Official Itineraries Section */
+    .itinerary_section {
+      padding: 80px 0;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+    .itinerary_section h2 {
+      color: #0f172a !important;
+    }
+    .itinerary_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .itinerary_nav_tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+    .itin_tab_btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #475569;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .itin_tab_btn:hover, .itin_tab_btn.active {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
+    }
+    .itin_content_panel {
+      display: none;
+      animation: fadeInPop 0.4s ease;
+    }
+    .itin_content_panel.active {
+      display: block;
+    }
+    .itin_card_main {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    .itin_card_main h3 {
+      color: #0f172a !important;
+    }
+    .itin_card_main p.lh_1_6 {
+      color: #334155 !important;
+    }
+    .itin_banner_img {
+      width: 100%;
+      max-height: 520px;
+      height: auto;
+      object-fit: contain;
+      background: #0f172a;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
+    .itin_day_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .itin_day_box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    .itin_day_box:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    .itin_day_box h4 {
+      color: #0f172a !important;
+    }
+    .itin_day_box p {
+      color: #64748b !important;
+    }
+    .itin_day_badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #0b1120;
+      font-weight: 900;
+      font-size: 1.2rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    /* Official Reviews Section */
+    .review_section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    .review_section h2 {
+      color: #0f172a !important;
+    }
+    .review_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .review_stats_bar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+    .review_stat_item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 20px 35px;
+      text-align: center;
+      min-width: 180px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+    .review_stat_num {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #b4842a;
+    }
+    .review_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 25px;
+    }
+    .review_card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    }
+    .review_card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 15px 35px rgba(201, 162, 79, 0.15);
+    }
+    .review_thumb_img {
+      display: none !important;
+    }
+    .review_card_body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .review_stars {
+      color: #f59e0b;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 3px;
+    }
+    .review_title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0f172a !important;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .review_body {
+      font-size: 1.45rem;
+      color: #334155 !important;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .review_author_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 1.3rem;
+      color: #64748b;
+    }
+    .review_course_tag {
+      background: rgba(201, 162, 79, 0.15);
+      color: #b4842a;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    /* Official Boarding Guide Section */
+    .guide_section {
+      padding: 80px 0;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+    .guide_section h2 {
+      color: #0f172a !important;
+    }
+    .guide_section p.fc_muted {
+      color: #64748b !important;
+    }
+    .guide_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .guide_card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s;
+    }
+    .guide_card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-3px);
+    }
+    .guide_card h3 {
+      color: #0f172a !important;
+    }
+    .guide_card p {
+      color: #64748b !important;
+    }
+    .guide_icon {
+      font-size: 2.8rem;
+      color: #b4842a;
+      margin-bottom: 15px;
+    }
+
+    .cruise_footer {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 40px 0;
+      margin-top: auto;
+      color: #64748b;
+    }
+    .cruise_footer .btn_line {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b !important;
+    }
+    .cruise_footer .btn_line:hover {
+      background: #f1f5f9;
+      color: #0f172a !important;
+    }
+    @media (max-width: 968px) {
+      .lucky_box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .cruise_main_title { font-size: 2.5rem; }
+      .cruise_main_sub { font-size: 1.4rem; }
+      .back_to_home span { display: none; }
+      .video_grid, .resource_grid, .review_grid, .itin_day_grid { grid-template-columns: 1fr; }
+      .lucky_slot_text { font-size: 3.6rem; }
+      .lucky_slot_box { min-width: 200px; padding: 12px 25px; }
+      .lucky_start_btn { font-size: 1.7rem; padding: 14px 30px; }
+      .join_cta_card { padding: 25px 20px; text-align: center; }
+      .join_cta_btn_wrap { width: 100%; }
+      .slide_video_quick_btn {
+        bottom: 12px;
+        right: 12px;
+        font-size: 1.2rem;
+        padding: 6px 12px;
+      }
+      .inc_exc_grid { grid-template-columns: 1fr; }
+      .step_process_grid { grid-template-columns: 1fr; }
+    }
+
+    /* Included / Excluded Section Styles */
+    .inc_exc_section {
+      padding: 80px 0;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+    .inc_exc_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .inc_card {
+      background: #ffffff;
+      border: 2px solid #10b981;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08);
+    }
+    .exc_card {
+      background: #ffffff;
+      border: 2px solid #f59e0b;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.08);
+    }
+    .inc_exc_item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 15px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .inc_exc_item:last-child {
+      border-bottom: none;
+    }
+    .inc_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .exc_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.12);
+      color: #d97706;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Membership Details & Architecture Styles */
+    .membership_section {
+      padding: 85px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    .member_table_wrap {
+      overflow-x: auto;
+      margin-top: 35px;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    .member_table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      min-width: 680px;
+    }
+    .member_table th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 18px 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .member_table th.highlight {
+      background: var(--gold);
+      color: #0b1120;
+    }
+    .member_table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 1.45rem;
+      color: #334155;
+    }
+    .member_table tr:last-child td {
+      border-bottom: none;
+    }
+    .member_table td.highlight {
+      background: #fdfbf7;
+      font-weight: 700;
+      color: #b4842a;
+    }
+
+    /* 3-Step Process Cards */
+    .step_process_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+    .step_card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 30px 24px;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .step_card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 30px rgba(201, 162, 79, 0.15);
+    }
+    .step_num {
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      color: #0b1120;
+      font-weight: 900;
+      font-size: 1.8rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="cruise_header">
+    <div class="wrap d_flex jc_sb ai_cen">
+      <div class="d_flex ai_cen gap3">
+        <a href="index.html" class="logo">
+          <span class="logo_text font_bold" style="color: #0f172a; font-size: 2.0rem; white-space: nowrap;">더좋은라이프 <strong class="fc_gold">맥스지사</strong></span>
+        </a>
+      </div>
+
+      <div class="d_flex ai_cen gap2 header_menu_group">
+        <a href="#inc-exc-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-list-check mr1"></i> 포함/불포함
+        </a>
+        <a href="#membership-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-gem mr1"></i> 멤버십 안내
+        </a>
+        <a href="#itinerary-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-map-location-dot mr1"></i> 운항 일정
+        </a>
+        <a href="#review-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-star mr1"></i> 여행 후기
+        </a>
+        <a href="#video-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-play-circle mr1"></i> 영상 갤러리
+        </a>
+        <a href="#lucky-draw" class="nav_link_btn" style="color:var(--gold); font-weight:700;">
+          <i class="fa-solid fa-gift mr1"></i> 럭키드로우
+        </a>
+        <a href="https://intranet.htourzone.co.kr/api/join/?s=20260090" target="_blank" rel="noopener noreferrer" class="btn btn_gold_glow fs_13 px4 py2 btn_online_join" style="border-radius: 20px; white-space: nowrap;">
+          <i class="fa-solid fa-file-signature mr1"></i> 온라인 가입 ↗
+        </a>
+        <a href="index.html" class="back_to_home">
+          <i class="fa-solid fa-house"></i>
+          <span>메인 홈</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Title Banner -->
+  <section class="cruise_hero_banner">
+    <div class="wrap">
+      <span class="cruise_badge"><i class="fa-solid fa-compass mr1"></i> HD투어존 x 맥스지사 공식 설명자료</span>
+      <h1 class="cruise_main_title">내 생애 최고의 휴식, <span class="fc_gold">럭셔리 크루즈 멤버십</span></h1>
+      <p class="cruise_main_sub">
+        여행은 먼저 떠나고 돈은 나중에! 87.5% 선지원 파격 혜택과 10년 가격 동결 보장<br class="pc_only">
+        슬라이드를 넘겨 프레젠테이션을 확인하고, 하단 영상 및 공식 자료를 함께 열람하세요.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. Main Viewer Section -->
+  <section class="viewer_section">
+    <div class="wrap pres_container">
+      <div class="pres_card_dark" id="presWrapper">
+        
+        <!-- 상단 툴바 -->
+        <div class="pres_toolbar_dark d_flex jc_sb ai_cen">
+          <div class="pres_info d_flex ai_cen gap3">
+            <span class="badge_pill bg_gold fc_white font_bold fs_14">크루즈 프레젠테이션</span>
+            <div class="pres_pagination fc_white font_bold fs_18"></div>
+          </div>
+          <div class="pres_actions d_flex ai_cen gap3">
+            <span class="fs_14 fc_muted pc_only"><i class="fa-solid fa-keyboard mr1"></i>키보드 좌우(←/→) 방향키로 넘길 수 있습니다</span>
+            <button class="pres_fullscreen_btn" id="presFullscreenBtn" title="전체화면 발표 모드">
+              <i class="fa-solid fa-expand"></i> <span class="fs_14 font_medium">전체화면</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 메인 슬라이더 (16:9 와이드) -->
+        <div class="pres_slider_box">
+          <div class="swiper presentation-swiper">
+            <div class="swiper-wrapper">
+              
+              <!-- 슬라이드 01: 표지 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_01.webp" alt="크루즈 멤버십 표지" loading="eager">
+                  <button class="slide_video_quick_btn" onclick="openVideoModal('cruise/cf영상.mp4', 'HD투어존 럭셔리 크루즈 공식 TV CF')">
+                    <i class="fa-solid fa-circle-play fc_gold"></i> TV CF 영상 보기
+                  </button>
+                </div>
+              </div>
+
+              <!-- 슬라이드 02: 수상실적 및 소개 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_02.webp" alt="바다위의 리조트 크루즈 수상내역" loading="lazy">
+                  <button class="slide_video_quick_btn" onclick="openVideoModal('cruise/MSC 크루즈동영.mp4', 'MSC 초대형 크루즈 투어 영상')">
+                    <i class="fa-solid fa-circle-play fc_gold"></i> MSC 크루즈 투어 영상
+                  </button>
+                </div>
+              </div>
+
+              <!-- 슬라이드 03: 선지원 안내 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_03.webp" alt="목돈 걱정 없이 월 4만원대 선지원" loading="lazy">
+                  <button class="slide_video_quick_btn" onclick="openVideoModal('cruise/송가인 동영상 11.mp4', '홍보모델 송가인 추천 영상')">
+                    <i class="fa-solid fa-circle-play fc_gold"></i> 송가인 추천 영상
+                  </button>
+                </div>
+              </div>
+
+              <!-- 슬라이드 04: 15회차 즉시 출발 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_04.webp" alt="단 15회차 납입시 즉시 출발" loading="lazy">
+                </div>
+              </div>
+
+              <!-- 슬라이드 05: 여행 준비 과정 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_05.webp" alt="여행 준비 과정 로드맵" loading="lazy">
+                </div>
+              </div>
+
+              <!-- 슬라이드 06: 10년 가격 동결 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_06.webp" alt="10년간 가격 동결 및 양도양수" loading="lazy">
+                </div>
+              </div>
+
+              <!-- 슬라이드 07: 올인클루시브 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_07.webp" alt="지갑을 열 필요 없는 올인클루시브" loading="lazy">
+                  <button class="slide_video_quick_btn" onclick="openVideoModal('cruise/홍보영상(다양한 액티비티와 프로그램 소개).mp4', '선내 액티비티 & 프로그램 소개')">
+                    <i class="fa-solid fa-circle-play fc_gold"></i> 액티비티 영상 보기
+                  </button>
+                </div>
+              </div>
+
+              <!-- 슬라이드 08: 전 세계 바다 코스 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_08.webp" alt="지중해 알래스카 북유럽 디즈니크루즈" loading="lazy">
+                  <button class="slide_video_quick_btn" onclick="openVideoModal('cruise/홍보영상(동부지중해크루즈).mp4', '동부 지중해 크루즈 기항지 영상')">
+                    <i class="fa-solid fa-circle-play fc_gold"></i> 지중해 코스 영상
+                  </button>
+                </div>
+              </div>
+
+              <!-- 슬라이드 09: 비교 차이점 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_09.webp" alt="일반 상조/여행사 대비 HD투어존만의 차이" loading="lazy">
+                </div>
+              </div>
+
+              <!-- 슬라이드 10: 안전장치 지급보증 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_10.webp" alt="IBK기업은행 지급보증 50%" loading="lazy">
+                </div>
+              </div>
+
+              <!-- 슬라이드 11: 가입 및 상담 문의 -->
+              <div class="swiper-slide pres_slide">
+                <div class="pres_img_wrap">
+                  <img src="slides/slide_11.webp" alt="지금 당장 내 생애 최고의 휴식을 예약하세요" loading="lazy">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 좌우 네비게이션 버튼 -->
+            <button class="pres_nav_btn pres_btn_prev" aria-label="이전 슬라이드">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="pres_nav_btn pres_btn_next" aria-label="다음 슬라이드">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 하단 썸네일 바 -->
+        <div class="pres_thumbs_box_dark">
+          <div class="swiper presentation-thumbs-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_01.webp" alt="썸네일 1"><span>1</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_02.webp" alt="썸네일 2"><span>2</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_03.webp" alt="썸네일 3"><span>3</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_04.webp" alt="썸네일 4"><span>4</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_05.webp" alt="썸네일 5"><span>5</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_06.webp" alt="썸네일 6"><span>6</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_07.webp" alt="썸네일 7"><span>7</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_08.webp" alt="썸네일 8"><span>8</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_09.webp" alt="썸네일 9"><span>9</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_10.webp" alt="썸네일 10"><span>10</span></div>
+              <div class="swiper-slide pres_thumb_item"><img src="slides/slide_11.webp" alt="썸네일 11"><span>11</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 슬라이더 하단 정보 및 바로 상담 액션바 -->
+        <div class="pres_footer_bar_dark d_flex jc_sb ai_cen flex_wrap gap3">
+          <div>
+            <p class="fs_18 fc_white font_bold mb1"><i class="fa-solid fa-ship fc_gold mr2"></i>HD투어존 럭셔리 크루즈 공식 회원 혜택</p>
+            <p class="fs_14 fc_muted">총 120회 만기 상품 · 15회차 납입 후 즉시 출발 · 10년 금액 동결 보장</p>
+          </div>
+          <div class="d_flex gap2 flex_wrap">
+            <a href="https://intranet.htourzone.co.kr/api/join/?s=20260090" target="_blank" rel="noopener noreferrer" class="btn btn_gold_glow fs_16 px5 py3">
+              <i class="fa-solid fa-file-signature mr1"></i> 온라인 가입신청 ↗
+            </a>
+            <a href="tel:01095098701" class="btn btn_gold fs_16 px5 py3" style="border-radius: 8px;">
+              <i class="fa-solid fa-phone-volume mr1"></i> 전화 상담문의
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 1-1. Official Included / Excluded Section (포함사항 및 별도 비용 공식 안내) -->
+  <section class="inc_exc_section" id="inc-exc-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">INCLUDED & EXCLUDED GUIDE</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-scale-balanced fc_gold mr2"></i>포함사항 · 별도 비용 공식 투명 안내
+        </h2>
+        <p class="fs_18 fc_muted">
+          무엇이 포함되고 어떤 비용이 별도인지 한눈에! 투명하고 정직한 올인클루시브 기준을 약속합니다.
+        </p>
+        <div class="d_flex jc_cen gap3 mt4 flex_wrap">
+          <span class="badge_pill bg_dark fc_white font_bold fs_14"><i class="fa-solid fa-ban mr1 fc_gold"></i> 노팁 (선내 공동경비 포함)</span>
+          <span class="badge_pill bg_dark fc_white font_bold fs_14"><i class="fa-solid fa-ban mr1 fc_gold"></i> 노옵션 (기항지 관광 기본포함)</span>
+          <span class="badge_pill bg_dark fc_white font_bold fs_14"><i class="fa-solid fa-ban mr1 fc_gold"></i> 노쇼핑 (쇼핑 강요 없는 자유일정)</span>
+        </div>
+      </div>
+
+      <div class="inc_exc_grid">
+        <!-- 포함 사항 카드 -->
+        <div class="inc_card">
+          <div class="d_flex ai_cen gap3 mb4 border_b pb3" style="border-color: rgba(16, 185, 129, 0.2);">
+            <div class="inc_icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div>
+              <h3 class="fs_24 font_extrabold" style="color: #059669;">포함사항 (Included)</h3>
+              <p class="fs_14 fc_muted">멤버십으로 사전에 모두 함께 준비해 드립니다</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">왕복 항공요금 및 유류할증료</strong>
+              <p class="fs_14" style="color: #475569;">전 일정 국제선 정규 항공권 및 유류할증료, 공항세 기본 포함</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-ship"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">크루즈 객실 및 선내 전 일정 식사</strong>
+              <p class="fs_14" style="color: #475569;">선내 뷔페, 정찬 코스 레스토랑, 24시간 룸스낵, 수영장/대극장 브로드웨이 쇼</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-hotel"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">육상 일정 특급 호텔 & 전용 차량</strong>
+              <p class="fs_14" style="color: #475569;">기항 도시 특급 호텔(2인 1실), 육상 식사, 전용 리무진 버스</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-landmark"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">전 일정 기항지 관광 & 현지 가이드</strong>
+              <p class="fs_14" style="color: #475569;">추가 옵션 비용 강요 없이 전 기항지 핵심 명소 투어 및 가이드 비용 기본 포함</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">100% 한국인 크루즈 전문 인솔자</strong>
+              <p class="fs_14" style="color: #475569;">인천공항 출국부터 귀국까지 선내 신문 번역, 기항지 통역 등 밀착 전담 케어</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">공동경비 및 기사/가이드 팁</strong>
+              <p class="fs_14" style="color: #475569;">현지 기사·가이드 팁, 식당 물값 등 일체 포함 (현장 추가 부담 없음)</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-wine-glass"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">선내 환영 주류 1회 무료 제공</strong>
+              <p class="fs_14" style="color: #475569;">여행의 낭만을 더하는 와인 또는 맥주 1회 무료 제공 서비스</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="inc_icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">해외 여행자보험 가입</strong>
+              <p class="fs_14" style="color: #475569;">전 일정 1억원 한도 해외 여행자 안심 보험 자동 가입</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 별도 비용 카드 -->
+        <div class="exc_card">
+          <div class="d_flex ai_cen gap3 mb4 border_b pb3" style="border-color: rgba(245, 158, 11, 0.2);">
+            <div class="exc_icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div>
+              <h3 class="fs_24 font_extrabold" style="color: #d97706;">별도 비용 (Excluded)</h3>
+              <p class="fs_14 fc_muted">일정과 개인 선택에 따라 추가되는 실비 항목입니다</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="exc_icon"><i class="fa-solid fa-anchor"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">크루즈 항만세 & 선내 팁</strong>
+              <p class="fs_14" style="color: #475569;">항만세(1인 약 39만원), 크루즈 선사 규정에 따른 선상 승조원 팁</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="exc_icon"><i class="fa-solid fa-passport"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">출입국 비자 및 서류 수수료</strong>
+              <p class="fs_14" style="color: #475569;">미국 ESTA, 캐나다 eTA, 유럽 ETIAS 등 각국 전자입국비자 발급 수수료</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="exc_icon"><i class="fa-solid fa-cocktail"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">선내 유료 시설 & 개인 경비</strong>
+              <p class="fs_14" style="color: #475569;">선내 전문 스파, 유료 스페셜티 레스토랑, 유료 주류/음료, 개인 쇼핑 비용</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="exc_icon"><i class="fa-solid fa-bed"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">객실 및 항공 업그레이드 차액</strong>
+              <p class="fs_14" style="color: #475569;">발코니/스위트 객실 업그레이드, 비즈니스석 차액, 독실 사용료(싱글차지)</p>
+            </div>
+          </div>
+
+          <div class="inc_exc_item">
+            <div class="exc_icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div>
+              <strong class="fs_16 d_block mb1" style="color: #0f172a;">환율 급등 및 극성수기 추가금</strong>
+              <p class="fs_14" style="color: #475569;">기준환율 대비 3% 이상 급등 시 차액, 명절 및 극성수기(7~8월) 추가금</p>
+            </div>
+          </div>
+
+          <div class="p4 mt4" style="background: rgba(245, 158, 11, 0.08); border-radius: 12px; border: 1px dashed rgba(245, 158, 11, 0.4);">
+            <p class="fs_13 lh_1_6" style="color: #92400e;">
+              ※ 위 항목은 일반 해외출발 크루즈 기준입니다. 이집트 나일강 리버크루즈나 국내출발 크루즈 등은 포함·별도 비용 기준이 상이할 수 있으므로 상세 일정을 확인해 주시기 바랍니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1-2. Official Membership Architecture (멤버십 상세 규정 & 혜택 비교) -->
+  <section class="membership_section" id="membership-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">MEMBERSHIP ARCHITECTURE</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-gem fc_gold mr2"></i>여행먼저 크루즈 멤버십 안내 및 혜택 비교
+        </h2>
+        <p class="fs_18 fc_muted">
+          10년 동안 17만 명 이상이 선택한 대한민국 1등 크루즈 멤버십! 여행 먼저, 돈은 나중에!
+        </p>
+      </div>
+
+      <!-- 4대 핵심 가치 카드 -->
+      <div class="d_flex gap4 flex_wrap jc_cen mb8">
+        <div class="bg_white p5 b_rad16 text_center" style="flex: 1; min-width: 240px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+          <div class="fs_32 fc_gold mb2"><i class="fa-solid fa-plane-circle-check"></i></div>
+          <h4 class="fs_18 font_bold mb1" style="color: #0f172a;">87.5% 파격 선지원</h4>
+          <p class="fs_13 fc_muted">15회차(또는 7회 정상납입 후 8회 선납) 납입 시 목돈 없이 즉시 여행 출발!</p>
+        </div>
+        <div class="bg_white p5 b_rad16 text_center" style="flex: 1; min-width: 240px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+          <div class="fs_32 fc_gold mb2"><i class="fa-solid fa-lock"></i></div>
+          <h4 class="fs_18 font_bold mb1" style="color: #0f172a;">10년 금액 동결 보장</h4>
+          <p class="fs_13 fc_muted">가입 후 물가와 여행비가 아무리 올라도 계약 당시 가입금액 그대로 10년간 보장!</p>
+        </div>
+        <div class="bg_white p5 b_rad16 text_center" style="flex: 1; min-width: 240px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+          <div class="fs_32 fc_gold mb2"><i class="fa-solid fa-users-gear"></i></div>
+          <h4 class="fs_18 font_bold mb1" style="color: #0f172a;">가족·지인 자유 양도</h4>
+          <p class="fs_13 fc_muted">여행을 못 가더라도 위약금 없이 출발 3개월 전까지 가족/지인에게 양도 가능 (수수료 5천원)</p>
+        </div>
+        <div class="bg_white p5 b_rad16 text_center" style="flex: 1; min-width: 240px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+          <div class="fs_32 fc_gold mb2"><i class="fa-solid fa-building-columns"></i></div>
+          <h4 class="fs_18 font_bold mb1" style="color: #0f172a;">IBK 기업은행 지급보증</h4>
+          <p class="fs_13 fc_muted">국책은행인 기업은행에서 월 납입금을 50%까지 안전하게 법적 지급보증</p>
+        </div>
+      </div>
+
+      <!-- 멤버십 라인업 비교 테이블 -->
+      <div class="member_table_wrap">
+        <table class="member_table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th class="highlight">스탠다드 [여행먼저 크루즈]</th>
+              <th>프리미엄+ [Premium+]</th>
+              <th>VIP 파트너스</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>월 납입금액</strong></td>
+              <td class="highlight"><strong>월 49,500원</strong></td>
+              <td>월 74,250원</td>
+              <td>월 49,500원</td>
+            </tr>
+            <tr>
+              <td><strong>납입 기간 & 총액</strong></td>
+              <td class="highlight"><strong>120회 / 5,940,000원</strong></td>
+              <td>120회 / 8,910,000원</td>
+              <td>140회 / 6,930,000원</td>
+            </tr>
+            <tr>
+              <td><strong>이용 기준</strong></td>
+              <td class="highlight">지중해·알래스카 1인 / 아시아·디즈니 2인</td>
+              <td>지중해·알래스카 등 1인 (2인 1실)</td>
+              <td>지중해·알래스카 1인 / 아시아 2인</td>
+            </tr>
+            <tr>
+              <td><strong>기본 객실</strong></td>
+              <td class="highlight">인사이드 (내측 객실)</td>
+              <td><strong>발코니 객실 기본 탑재</strong></td>
+              <td>인사이드 (내측 객실)</td>
+            </tr>
+            <tr>
+              <td><strong>항공편 기준</strong></td>
+              <td class="highlight">정규 항공편 (경유/직항)</td>
+              <td><strong>직항 우선 배정</strong></td>
+              <td>정규 항공편</td>
+            </tr>
+            <tr>
+              <td><strong>항만세 & 유류할증료</strong></td>
+              <td class="highlight">별도 비용 (약 39만원)</td>
+              <td>별도 비용</td>
+              <td><strong>항만세 & 유류할증료 포함</strong></td>
+            </tr>
+            <tr>
+              <td><strong>선지원 이용 회차</strong></td>
+              <td class="highlight">15회차 정상납입 후 이용</td>
+              <td>15회차 정상납입 후 차액정산</td>
+              <td>15회차 정상납입 후 이용</td>
+            </tr>
+            <tr>
+              <td><strong>만기 환급률</strong></td>
+              <td class="highlight"><strong>85% 환급 보장</strong></td>
+              <td>85% 환급 보장</td>
+              <td>85% 환급 보장</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3-Step 이용 절차 -->
+      <div class="step_process_grid">
+        <div class="step_card">
+          <div class="step_num">01</div>
+          <h4 class="fs_20 font_bold mb2" style="color: #0f172a;">출발 7개월 전 가예약 신청</h4>
+          <p class="fs_14" style="color: #475569; line-height: 1.6;">
+            희망 월·지역·인원을 고객지원팀에 신청하세요. 위약금 없이 언제든 무료 취소가 가능하며, 출발 3~4개월 전 확정 일정을 우선 안내해 드립니다.
+          </p>
+        </div>
+        <div class="step_card">
+          <div class="step_num">02</div>
+          <h4 class="fs_20 font_bold mb2" style="color: #0f172a;">15회차 납입 후 선지원 출발</h4>
+          <p class="fs_14" style="color: #475569; line-height: 1.6;">
+            15회차 정상 납입(또는 7회 납입 후 8회분 선납) 시 목돈 부담 없이 원하는 확정 일정으로 먼저 크루즈 여행을 떠납니다.
+          </p>
+        </div>
+        <div class="step_card">
+          <div class="step_num">03</div>
+          <h4 class="fs_20 font_bold mb2" style="color: #0f172a;">여행 후 잔여금 분할 완납</h4>
+          <p class="fs_14" style="color: #475569; line-height: 1.6;">
+            여행을 다녀오신 후에도 계약 방식에 따라 월 49,500원씩 부담 없이 자동이체로 남은 회차를 분할 납입하시면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. Video Showcase Section (홍보 및 교육 영상 갤러리) -->
+  <section class="video_section" id="video-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">HD TOURZONE VIDEO GALLERY</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2"><i class="fa-solid fa-clapperboard fc_gold mr2"></i>크루즈 공식 홍보 및 교육 영상</h2>
+        <p class="fs_18 fc_muted">영상을 클릭하시면 고화질 전체화면 플레이어로 바로 시청하실 수 있습니다.</p>
+      </div>
+
+      <div class="video_grid">
+        
+        <!-- 영상 1: 공식 CF -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/cf영상.mp4', 'HD투어존 공식 TV CF 광고')">
+            <img src="cruise/video_thumbs/thumb_cf.jpg" alt="HD투어존 공식 TV CF 광고" style="object-position: center;">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">공식 TV CF</span>
+            <span class="video_duration">HD 고화질</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">HD투어존 크루즈 공식 TV CF</h3>
+            <p class="video_desc">"여행은 먼저! 돈은 나중에!" 머니투데이 2년 연속 히트상품대상 수상에 빛나는 대한민국 대표 크루즈 멤버십 CF입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/cf영상.mp4', 'HD투어존 공식 TV CF 광고')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 2: 송가인 추천 영상 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/송가인 동영상 11.mp4', '홍보모델 가수 송가인 추천 인터뷰')">
+            <img src="cruise/video_thumbs/thumb_songgain.jpg" alt="송가인 추천 인터뷰 영상">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">스타 추천</span>
+            <span class="video_duration">인터뷰 영상</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">가수 송가인의 크루즈 여행 추천</h3>
+            <p class="video_desc">부모님 효도 선물, 특별한 가족 여행으로 적극 추천하는 송가인의 생생한 크루즈 여행 추천 메시지입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/송가인 동영상 11.mp4', '홍보모델 가수 송가인 추천 인터뷰')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 3: 선내 액티비티 & 라이프 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/홍보영상(다양한 액티비티와 프로그램 소개).mp4', '선내 다양한 액티비티 및 프로그램 소개')">
+            <img src="cruise/video_thumbs/thumb_activity.jpg" alt="선내 액티비티 영상">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">선내 라이프</span>
+            <span class="video_duration">액티비티 안내</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">선내 다양한 액티비티 & 프로그램</h3>
+            <p class="video_desc">초대형 수영장, 매일 밤 화려한 대극장 브로드웨이 쇼, 면세점 쇼핑, 무제한 뷔페 등 선내에서 누리는 환상적인 일상을 확인하세요.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/홍보영상(다양한 액티비티와 프로그램 소개).mp4', '선내 다양한 액티비티 및 프로그램 소개')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 4: 동부 지중해 크루즈 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/홍보영상(동부지중해크루즈).mp4', '로맨틱 동부 지중해 크루즈 기항지 투어')">
+            <img src="cruise/video_thumbs/thumb_east_med.jpg" alt="동부 지중해 크루즈">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">인기 기항지</span>
+            <span class="video_duration">동부 지중해</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">로맨틱 동부 지중해 크루즈 여정</h3>
+            <p class="video_desc">그리스 산토리니의 푸른 지붕, 미코노스의 눈부신 해변, 아테네 아크로폴리스를 순항하는 꿈의 항로를 소개합니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/홍보영상(동부지중해크루즈).mp4', '로맨틱 동부 지중해 크루즈 기항지 투어')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 5: 알래스카 빙하 크루즈 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/홍보영상(알래스카 크루즈).mp4', '대자연의 감동 알래스카 빙하 크루즈')">
+            <img src="cruise/video_thumbs/thumb_alaska.jpg" alt="알래스카 크루즈">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">인기 기항지</span>
+            <span class="video_duration">알래스카 빙하</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">대자연의 경이로움, 알래스카 크루즈</h3>
+            <p class="video_desc">발코니 객실 바로 앞에서 무너져 내리는 거대한 빙벽과 피오르드, 고래를 만나는 평생 잊지 못할 대자연의 감동을 선사합니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/홍보영상(알래스카 크루즈).mp4', '대자연의 감동 알래스카 빙하 크루즈')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 6: 두바이 & 아라비아해 크루즈 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/홍보영상(두바이크루즈여행).mp4', '신비로운 두바이 & 아라비아해 크루즈')">
+            <img src="cruise/video_thumbs/thumb_dubai.jpg" alt="두바이 크루즈">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">이국적 여정</span>
+            <span class="video_duration">두바이/아라비아</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">두바이 & 아라비아해 이국적 해상 여정</h3>
+            <p class="video_desc">황금빛 사막 사파리와 미래형 초고층 빌딩, 아라비아의 이국적인 문화가 어우러진 최고급 럭셔리 코스입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/홍보영상(두바이크루즈여행).mp4', '신비로운 두바이 & 아라비아해 크루즈')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 7: MSC 크루즈 투어 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/MSC 크루즈동영.mp4', '바다 위의 웅장한 특급 리조트 MSC 크루즈')">
+            <img src="cruise/video_thumbs/thumb_msc.jpg" alt="MSC 크루즈 투어">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">초대형 선박</span>
+            <span class="video_duration">선박 투어</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">바다 위의 웅장한 특급 리조트 MSC 크루즈</h3>
+            <p class="video_desc">유럽 명품 선사 MSC 크루즈의 스와로브스키 크리스털 계단, 최고급 다이닝 레스토랑 등 시설 투어 영상입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/MSC 크루즈동영.mp4', '바다 위의 웅장한 특급 리조트 MSC 크루즈')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 영상 8: 서부 지중해 기항지 투어 -->
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/홍보영상(지중해 기항지관광1).mp4', '서부 지중해 고대 도시 기항지 관광')">
+            <img src="cruise/video_thumbs/thumb_west_med.jpg" alt="지중해 기항지">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">기항지 투어</span>
+            <span class="video_duration">서부 지중해</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">서부 지중해 고대 도시 기항지 관광</h3>
+            <p class="video_desc">이탈리아 로마, 프랑스 니스, 스페인 바르셀로나 등 역사와 예술이 살아 숨쉬는 서부 지중해 명소 탐방 영상입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/홍보영상(지중해 기항지관광1).mp4', '서부 지중해 고대 도시 기항지 관광')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Resource Center Section (공식 서식 및 브로슈어 자료실) -->
+  <section class="resource_section" id="resource-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">OFFICIAL DOCUMENTS</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2"><i class="fa-solid fa-folder-open fc_gold mr2"></i>공식 자료실 및 가입 가이드</h2>
+        <p class="fs_18 fc_muted">고객 상담 및 세일즈 교육에 필요한 공식 PDF 브로슈어 및 전자서명 매뉴얼을 다운로드하세요.</p>
+      </div>
+
+      <div class="resource_grid">
+        
+        <!-- 자료 1: 공식 브로슈어 (8P) -->
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-file-pdf"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">공식 안내 책자</span>
+            <h3 class="fs_20 font_bold fc_white mb2">HD투어존 크루즈 브로슈어 (8P)</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">선박 소개, 기항지 일정, 객실 안내 및 혜택이 총망라된 8페이지 전면 컬러 브로슈어 PDF입니다.</p>
+          </div>
+          <a href="cruise/HD투어존 브로슈어(8P).pdf" target="_blank" download class="video_action_btn">
+            <i class="fa-solid fa-download mr1"></i> 브로슈어 다운로드 (4.1MB)
+          </a>
+        </div>
+
+        <!-- 자료 2: 디즈니 크루즈 전단지 (2P) -->
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">신규 특별 상품</span>
+            <h3 class="fs_20 font_bold fc_white mb2">싱가포르 디즈니 크루즈 전단 (2P)</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">온 가족이 열광하는 바다 위의 테마파크, 아시아 최초 싱가포르 출항 디즈니 크루즈 전단지입니다.</p>
+          </div>
+          <a href="cruise/디즈니크루즈 전단지(2P).pdf" target="_blank" download class="video_action_btn">
+            <i class="fa-solid fa-download mr1"></i> 전단지 다운로드 (21.8MB)
+          </a>
+        </div>
+
+        <!-- 자료 3: 온라인 전자서명 매뉴얼 (PPTX) -->
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-signature"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">간편 가입 가이드</span>
+            <h3 class="fs_20 font_bold fc_white mb2">온라인 회원가입(전자서명) 매뉴얼</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">스마트폰으로 종이 서류 없이 3분 만에 간편하게 전자서명으로 가입할 수 있는 스텝별 매뉴얼입니다.</p>
+          </div>
+          <a href="cruise/온라인 회원가입(전자서명) 메뉴얼.pptx" download class="video_action_btn">
+            <i class="fa-solid fa-file-powerpoint mr1"></i> 매뉴얼 다운로드 (4.0MB)
+          </a>
+        </div>
+
+        <!-- 자료 4: 프레젠테이션 원본 (PDF) -->
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-desktop"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">설명회 발표 자료</span>
+            <h3 class="fs_20 font_bold fc_white mb2">크루즈 멤버십 프레젠테이션 원본</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">상단 뷰어에 탑재된 11장 설명회 슬라이드 전체 원본 PDF 파일입니다. 오프라인 발표 시 활용 가능합니다.</p>
+          </div>
+          <a href="HD_Tourzone_Luxury_Cruise_Membership.pptx.pdf" target="_blank" download class="video_action_btn">
+            <i class="fa-solid fa-download mr1"></i> 슬라이드 원본 다운로드 (13.5MB)
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Official Itineraries Section (HD투어존 대표 4대 항로 세부 일정표) -->
+  <section class="itinerary_section" id="itinerary-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">OFFICIAL CRUISE ITINERARIES</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-map-location-dot fc_gold mr2"></i>HD투어존 공식 대표 운항 코스 & 상세 일정
+        </h2>
+        <p class="fs_18 fc_muted">전 일정 100% 한국인 전문 인솔자 동행 · 기항지 관광 요금 포함 · 올인클루시브 선내 정찬</p>
+      </div>
+
+      <!-- 항로 선택 탭 버튼 (공식 8대 운항 지역) -->
+      <div class="itinerary_nav_tabs">
+        <button type="button" class="itin_tab_btn active" onclick="switchItinTab('west-med')">
+          <i class="fa-solid fa-sun mr1"></i> 서부 지중해 8/10일 (스페인·프랑스·이탈리아)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('east-med')">
+          <i class="fa-solid fa-water mr1"></i> 동부 지중해 & 산토리니 9/10일 (그리스·크로아티아)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('alaska')">
+          <i class="fa-solid fa-icicles mr1"></i> 대자연 알래스카 빙하 8일 (미국·캐나다)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('dubai')">
+          <i class="fa-solid fa-mosque mr1"></i> 두바이 & 아라비아해 8일 (UAE·카타르)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('norway')">
+          <i class="fa-solid fa-mountain-sun mr1"></i> 북유럽 피오르드 & 발트해 (노르웨이·덴마크·독일)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('egypt')">
+          <i class="fa-solid fa-landmark mr1"></i> 이집트 나일강 5성 리버크루즈 (카이로·룩소르·아스완)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('asia')">
+          <i class="fa-solid fa-users mr1"></i> 아시아 크루즈 [2인 이용] (싱가포르·말레이·태국)
+        </button>
+        <button type="button" class="itin_tab_btn" onclick="switchItinTab('disney')">
+          <i class="fa-solid fa-wand-magic-sparkles mr1"></i> 디즈니 in 싱가포르 [2인 이용] (가족 테마)
+        </button>
+      </div>
+
+      <!-- 패널 1: 서부 지중해 -->
+      <div class="itin_content_panel active" id="itin-west-med">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180242026.png" alt="서부 지중해 로마 & 바르셀로나 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">유럽 1등 베스트셀러</span>
+              <h3 class="fs_28 font_bold fc_white mt1">낭만과 역사가 살아 숨쉬는 서부 지중해 크루즈</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: MSC 월드 유로파 (22만톤급 초대형 LNG 친환경 스마트선박) / 코스타 토스카나호</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">인솔자 케어</span>
+              <p class="fs_20 font_bold fc_gold">전 일정 100% 동행</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            바르셀로나의 가우디 성가족 성당부터 로마 바티칸, 남프랑스 프로방스, 시칠리아 화산섬까지 매일 아침 눈뜰 때마다 새로운 나라의 눈부신 항구가 펼쳐집니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 출발 ➔ 바르셀로나</h4>
+              <p class="fs_14 fc_muted lh_1_6">인천공항 미팅, 전용기편 스페인 바르셀로나 도착 후 시내 투어 및 MSC 크루즈 승선 수속</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">마르세유 / 프로방스 (프랑스)</h4>
+              <p class="fs_14 fc_muted lh_1_6">노트르담 드 라 가르드 성당, 마르세유 구항구 산책, 프로방스 라벤더 기념품 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">제노바 / 포르토피노 (이탈리아)</h4>
+              <p class="fs_14 fc_muted lh_1_6">콜럼버스의 고향 제노바 두오모 광장 탐방, 이탈리아 리비에라 해안 명품 마을 산책</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">로마 / 치비타베키아 (이탈리아)</h4>
+              <p class="fs_14 fc_muted lh_1_6">바티칸 박물관 & 성베드로 대성당, 콜로세움, 트레비 분수 투어 후 크루즈 귀선</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">팔레르모 / 시칠리아 (이탈리아)</h4>
+              <p class="fs_14 fc_muted lh_1_6">영화 대부의 무대 시칠리아, 몬레알레 대성당 황금 모자이크 및 카펠라 팔라티나 관람</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6~8</span>
+              <h4 class="fs_18 font_bold fc_white mb2">발레타(몰타) ➔ 바르셀로나 ➔ 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">요새 도시 몰타 발레타 탐방, 전일 전상 해상 파티 및 갈라 디너, 바르셀로나 하선 후 인천 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 2: 동부 지중해 -->
+      <div class="itin_content_panel" id="itin-east-med">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180242026_01.png" alt="동부 지중해 산토리니 블루돔 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">로맨틱 허니문 & 효도 인기 1위</span>
+              <h3 class="fs_28 font_bold fc_white mt1">푸른 아드리아해와 에게해의 낙원, 동부 지중해 & 산토리니</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: MSC 리리카호 / 코스타 델리지오사호</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">핵심 기항지</span>
+              <p class="fs_20 font_bold fc_gold">산토리니 블루돔 & 성벽</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            물의 도시 베니스에서 출항하여 아드리아해의 진주 두브로브니크 성벽을 거닐고, 산토리니의 눈부신 하얀 골목과 아테네 파르테논 신전을 마주하는 평생 잊지 못할 낭만의 여정입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1~2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 베니스 / 트리에스테</h4>
+              <p class="fs_14 fc_muted lh_1_6">산마르코 광장, 리알토 다리 투어 후 로맨틱 동부 지중해 크루즈 승선 수속 및 출항</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">두브로브니크 (크로아티아)</h4>
+              <p class="fs_14 fc_muted lh_1_6">유네스코 세계문화유산 구시가지 성벽 투어, 플라차 대로 산책 및 스르지산 전망대</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">코르푸 섬 (그리스)</h4>
+              <p class="fs_14 fc_muted lh_1_6">에메랄드빛 이오니아해의 휴양지, 아킬레온 궁전과 올드 타운 아케이드 거리 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">산토리니 섬 (그리스)</h4>
+              <p class="fs_14 fc_muted lh_1_6">이아마을 블루 돔과 하얀 골목길, 피라 마을 케이블카 탑승, 에게해 석양 감상</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6</span>
+              <h4 class="fs_18 font_bold fc_white mb2">아테네 / 피레우스 (그리스)</h4>
+              <p class="fs_14 fc_muted lh_1_6">인류 문명의 정점 아크로폴리스, 파르테논 신전, 근대 올림픽 경기장 탐방</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 7~9</span>
+              <h4 class="fs_18 font_bold fc_white mb2">스플리트(크로아티아) ➔ 베니스 ➔ 인천</h4>
+              <p class="fs_14 fc_muted lh_1_6">디오클레티아누스 로마 황제 궁전 탐방, 해상 선내 엔터테인먼트 만끽 후 안전 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 3: 알래스카 -->
+      <div class="itin_content_panel" id="itin-alaska">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180256960_04.png" alt="알래스카 빙벽 선상뷰" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">대자연의 웅장한 감동</span>
+              <h3 class="fs_28 font_bold fc_white mt1">지구의 마지막 야생, 알래스카 빙하 피오르드 크루즈</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: 프린세스 크루즈 / 로얄 캐리비안 14만톤급</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">특징</span>
+              <p class="fs_20 font_bold fc_gold">발코니 앞 빙벽 조망</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            장시간 버스를 타고 이동할 필요 없이, 크루즈 객실 발코니와 온수 야외 자쿠지에서 천둥소리를 내며 무너져 내리는 거대한 빙하와 피오르드, 혹등고래 떼를 만나는 대자연 힐링 투어입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 시애틀 출발</h4>
+              <p class="fs_14 fc_muted lh_1_6">미국 시애틀 파이크 플레이스 마켓 관광 후 알래스카 럭셔리 크루즈 승선</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">전일 해상 항해 (인사이드 패시지)</h4>
+              <p class="fs_14 fc_muted lh_1_6">잔잔한 피오르드 수로를 항해하며 선내 대극장 공연 및 최고급 스테이크 정찬</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">주노 (알래스카 주도)</h4>
+              <p class="fs_14 fc_muted lh_1_6">멘덴홀 거대 빙하 탐방, 혹등고래 워칭 투어, 야생 연어 만찬 체험</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">스캐그웨이 (골드러시 역사마을)</h4>
+              <p class="fs_14 fc_muted lh_1_6">19세기 골드러시 마을 탐방, 화이트 패스 & 유콘 빈티지 산악열차 협곡 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">엔디콧 암 피오르드 & 다스 빙하</h4>
+              <p class="fs_14 fc_muted lh_1_6">크루즈 선박이 빙하 바로 앞까지 초밀착 접근! 빙벽 붕괴의 경이로운 장관 관람</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6~8</span>
+              <h4 class="fs_18 font_bold fc_white mb2">빅토리아(캐나다) ➔ 시애틀 ➔ 인천</h4>
+              <p class="fs_14 fc_muted lh_1_6">영국풍 정원도시 부차트 가든 관람, 시애틀 하선 후 전용기편 인천 무사 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 4: 두바이 -->
+      <div class="itin_content_panel" id="itin-dubai">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180242026_03.png" alt="두바이 크루즈 및 아라비아 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">겨울철 최고 인기 항로</span>
+              <h3 class="fs_28 font_bold fc_white mt1">황금빛 사막과 미래 도시의 조화, 두바이 & 아라비아해</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: MSC 유로비아호 (최신형 초대형 리조트 크루즈)</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">기후</span>
+              <p class="fs_20 font_bold fc_gold">따뜻한 24℃ 최적 여행</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            세계 최고층 빌딩 버즈 칼리파와 황금빛 사막 사파리, 셰이크 자이드 그랜드 모스크의 웅장함을 아우르는 이국적인 최고급 럭셔리 휴양 항로입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1~2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 두바이 도착 및 승선</h4>
+              <p class="fs_14 fc_muted lh_1_6">두바이 몰, 분수 쇼, 버즈 칼리파 외관 관람 후 MSC 최신형 크루즈 승선</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">도하 (카타르)</h4>
+              <p class="fs_14 fc_muted lh_1_6">수크 와키프 전통 시장, 카타르 국립박물관, 코르니쉬 해변 산책</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">바레인 왕국</h4>
+              <p class="fs_14 fc_muted lh_1_6">알 파테 그랜드 모스크, 고대 바레인 요새, 유향 전통 시장 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">아부다비 (UAE 수도)</h4>
+              <p class="fs_14 fc_muted lh_1_6">순백의 셰이크 자이드 그랜드 모스크, 루브르 아부다비 미술관 관람</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6</span>
+              <h4 class="fs_18 font_bold fc_white mb2">사르 바니 야스 프라이빗 아일랜드</h4>
+              <p class="fs_14 fc_muted lh_1_6">크루즈 승객 전용 휴양 섬에서 에메랄드 해변 휴식과 비치 바비큐 파티</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 7~8</span>
+              <h4 class="fs_18 font_bold fc_white mb2">두바이 사막 사파리 ➔ 인천 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">붉은 사막 4륜구동 듄배싱 투어, 낙타 체험, 전용기 탑승 후 인천 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 5: 북유럽 -->
+      <div class="itin_content_panel" id="itin-norway">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180256960_02.png" alt="북유럽 노르웨이 피오르드 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">유네스코 세계자연유산의 향연</span>
+              <h3 class="fs_28 font_bold fc_white mt1">장대한 대자연의 서사시, 북유럽 피오르드 & 발트해</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: MSC 에우리비아호 (18만톤급 초대형 LNG 스마트선박) / 코스타 다이아데마호</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">멤버십 조건</span>
+              <p class="fs_20 font_bold fc_gold">1인 이용 (5·9월 상품가 적용)</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            동화의 나라 덴마크 코펜하겐을 시작으로 노르웨이 3대 피오르드의 압도적인 절벽과 에메랄드빛 폭포, 아르누보 양식의 항구 도시 올레순까지 순항하는 꿈의 대자연 힐링 여정입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1~2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 덴마크 코펜하겐</h4>
+              <p class="fs_14 fc_muted lh_1_6">인천공항 출발, 코펜하겐 뉘하운 운하거리 및 인어공주 동상 탐방 후 18만톤급 초대형 크루즈 승선</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">게이랑에르 피오르드 (노르웨이)</h4>
+              <p class="fs_14 fc_muted lh_1_6">유네스코 세계자연유산 게이랑에르 피오르드 유람, 7자매 폭포와 독수리 전망대 파노라마 뷰</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">올레순 (노르웨이)</h4>
+              <p class="fs_14 fc_muted lh_1_6">아르누보 양식의 파스텔톤 동화 도시, 아스크라 산 전망대에서 바라보는 노르웨이 군도 전경</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">플롬 & 송네 피오르드 (노르웨이)</h4>
+              <p class="fs_14 fc_muted lh_1_6">세계에서 가장 가파르고 아름다운 플롬 산악열차 탑승, 효스 폭포 요정의 춤 관람</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6</span>
+              <h4 class="fs_18 font_bold fc_white mb2">킬 / 함부르크 (독일)</h4>
+              <p class="fs_14 fc_muted lh_1_6">독일 북부의 관문 킬 운하와 함부르크 시청사 광장, 엘베 필하모니 콘서트홀 조망</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 7~9</span>
+              <h4 class="fs_18 font_bold fc_white mb2">코펜하겐 ➔ 인천 안전 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">코펜하겐 하선 후 시내 명소 탐방, 전용기편 탑승 후 한국 무사 도착</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 6: 이집트 나일강 리버크루즈 -->
+      <div class="itin_content_panel" id="itin-egypt">
+        <div class="itin_card_main">
+          <img src="cruise/egypt_nile_banner.jpg" alt="이집트 나일강 럭셔리 리버크루즈 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">5천 년 신비의 고대 문명 탐방</span>
+              <h3 class="fs_28 font_bold fc_white mt1">시간을 거슬러 올라가는 신화의 물길, 이집트 나일강 5성 리버크루즈</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: 나일강 5성급 디럭스 리버크루즈 선박 (전 객실 리버뷰 & 선상 풀장 탑재)</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">멤버십 조건</span>
+              <p class="fs_20 font_bold fc_gold">1인 이용 (11~3월 최적기)</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            바다 크루즈와는 또 다른 고요한 나일강의 물길을 따라 왕들의 무덤과 거대 신전들을 눈앞에서 탐험하는 생애 가장 이국적인 역사 문화 탐방 크루즈입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1~2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 카이로 도착</h4>
+              <p class="fs_14 fc_muted lh_1_6">인천공항 출발, 카이로 도착 후 기자의 3대 피라미드 및 스핑크스, 국립 이집트 문명박물관 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">룩소르 이동 ➔ 리버크루즈 승선</h4>
+              <p class="fs_14 fc_muted lh_1_6">국내선 항공편 룩소르 도착, 5성급 나일강 크루즈 체크인, 세계 최대 카르낙 신전 및 룩소르 신전 야경</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">왕가의 계곡 & 하트셉수트 신전</h4>
+              <p class="fs_14 fc_muted lh_1_6">투탕카멘의 무덤이 발견된 왕가의 계곡, 하트셉수트 여왕 장제전, 멤논의 거상 탐방 후 나일강 세일링</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">에드푸 & 콤옴보 신전</h4>
+              <p class="fs_14 fc_muted lh_1_6">마차를 타고 이동하는 에드푸 호루스 신전 탐방, 악어 신 소베크와 매의 신 호루스의 이중 신전 콤옴보 관람</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 6</span>
+              <h4 class="fs_18 font_bold fc_white mb2">아스완 & 아부심벨 대신전</h4>
+              <p class="fs_14 fc_muted lh_1_6">람세스 2세의 불멸의 걸작 아부심벨 신전 특별 방문, 아스완 하이댐 및 나일강 펠루카 전통 돛단배 체험</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 7~9</span>
+              <h4 class="fs_18 font_bold fc_white mb2">아스완 하선 ➔ 카이로 ➔ 인천 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">필레 섬 이시스 신전 탐방 후 카이로 경유, 인천공항 무사 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 7: 아시아 -->
+      <div class="itin_content_panel" id="itin-asia">
+        <div class="itin_card_main">
+          <img src="cruise/KakaoTalk_20260713_180256960_06.png" alt="아시아 싱가포르 및 동남아 크루즈 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">온 가족 2인 동반 혜택</span>
+              <h3 class="fs_28 font_bold fc_white mt1">부담 없는 비행과 따뜻한 남국의 힐링, 아시아 크루즈</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: 겐팅 드림호 (15만톤급 아시아 프리미엄 리조트 선박) / 로얄 캐리비안</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">멤버십 조건</span>
+              <p class="fs_20 font_bold fc_gold">멤버십 1구좌로 2인 동반 이용!</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            단 1구좌로 부부·연인·부모님 모시고 2인이 함께 떠나는 최고의 가성비 코스! 싱가포르 마리나 베이를 출발하여 말레이시아의 유네스코 고도 페낭과 태국의 눈부신 푸켓 섬을 한 번에 만납니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 싱가포르 도착 및 승선</h4>
+              <p class="fs_14 fc_muted lh_1_6">인천 출발 후 싱가포르 마리나 베이 크루즈 센터 도착, 15만톤급 리조트 크루즈 승선 수속</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">말레이시아 페낭 (유네스코 구도심)</h4>
+              <p class="fs_14 fc_muted lh_1_6">조지타운 스트리트 아트 벽화 거리, 켁록시(극락사) 사원, 동남아 명물 야시장 먹거리 투어</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">태국 푸켓 (안다만해의 진주)</h4>
+              <p class="fs_14 fc_muted lh_1_6">팡아만 해상국립공원 제임스본드 섬 보트 투어, 파통 비치 휴식 및 태국 전통 마사지 체험</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">전일 해상 항해 (선내 올인클루시브)</h4>
+              <p class="fs_14 fc_muted lh_1_6">6개 대형 워터슬라이드 파크, 바다 위 짚라인 로프코스, 선상 라이브 밴드 쇼와 세계 각국 뷔페</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5~6</span>
+              <h4 class="fs_18 font_bold fc_white mb2">싱가포르 하선 ➔ 인천 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">마리나 베이 샌즈 & 가든스 바이 더 베이 식물원 탐방, 세계 최고 주얼 창이 공항 투어 후 인천 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 패널 8: 디즈니 in 싱가포르 -->
+      <div class="itin_content_panel" id="itin-disney">
+        <div class="itin_card_main">
+          <img src="cruise/disney_cruise_banner.jpg" alt="디즈니 어드벤처호 싱가포르 전경" class="itin_banner_img">
+          <div class="d_flex jc_sb ai_cen flex_wrap gap3 mb4 border_b pb4">
+            <div>
+              <span class="badge_pill bg_gold fc_dark font_bold fs_13 mb1">아시아 최초 디즈니 크루즈 취항</span>
+              <h3 class="fs_28 font_bold fc_white mt1">바다 위에서 펼쳐지는 마법 같은 모험, 디즈니 어드벤처 in 싱가포르</h3>
+              <p class="fs_15 fc_muted mt1">탑승 선박: 디즈니 어드벤처호 (Disney Adventure, 20만톤급 초대형 테마파크 선박)</p>
+            </div>
+            <div class="ta_r">
+              <span class="fs_14 fc_muted">멤버십 조건</span>
+              <p class="fs_20 font_bold fc_gold">멤버십 1구좌로 2인 동반 이용!</p>
+            </div>
+          </div>
+
+          <p class="fs_16 fc_white lh_1_6 mb4">
+            디즈니, 픽사, 마블의 모든 세계관이 살아 숨쉬는 바다 위의 매직 킹덤! 선내 브로드웨이 뮤지컬, 바다 위 불꽃놀이, 캐릭터 그리팅까지 온 가족 3대가 감동하는 마법의 항해입니다.
+          </p>
+
+          <div class="itin_day_grid">
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 1</span>
+              <h4 class="fs_18 font_bold fc_white mb2">인천 ➔ 싱가포르 출발 & 디즈니 승선</h4>
+              <p class="fs_14 fc_muted lh_1_6">싱가포르 마리나 베이 크루즈 센터 승선, 미키 & 미니 선장과의 환영 웰컴 셀러브레이션 파티</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 2</span>
+              <h4 class="fs_18 font_bold fc_white mb2">디즈니 이매지네이션 가든 & 마블 존</h4>
+              <p class="fs_14 fc_muted lh_1_6">선내 중앙의 매혹적인 마법 정원 산책, 어벤져스와 함께하는 마블 히어로 체험존 및 해상 롤러코스터</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 3</span>
+              <h4 class="fs_18 font_bold fc_white mb2">브로드웨이급 뮤지컬 & 해상 불꽃축제</h4>
+              <p class="fs_14 fc_muted lh_1_6">월트 디즈니 극장에서 펼쳐지는 독점 라이브 뮤지컬, 밤하늘 바다 위를 수놓는 환상적인 디즈니 불꽃놀이</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 4</span>
+              <h4 class="fs_18 font_bold fc_white mb2">로테이셔널 다이닝 & 테마 키즈클럽</h4>
+              <p class="fs_14 fc_muted lh_1_6">매일 저녁 테마가 바뀌는 디즈니 인터랙티브 정찬, 연령별 전문 키즈클럽 및 어른들을 위한 럭셔리 라운지</p>
+            </div>
+            <div class="itin_day_box">
+              <span class="itin_day_badge">DAY 5</span>
+              <h4 class="fs_18 font_bold fc_white mb2">싱가포르 하선 ➔ 인천 귀국</h4>
+              <p class="fs_14 fc_muted lh_1_6">선내 캐릭터 작별 인사 후 마리나 베이 하선, 창이 공항 출발 인천공항 무사 귀국</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Official Customer Reviews (공식 홈페이지 실제 생생 여행후기 2,000+ 리뷰) -->
+  <section class="review_section" id="review-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">REAL CUSTOMER REVIEWS</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-comments fc_gold mr2"></i>HD투어존 공식 고객 생생 여행 후기
+        </h2>
+        <p class="fs_18 fc_muted">실제 다녀오신 고객님들이 전하는 감동의 기록! 2,000여 건의 누적 후기가 증명합니다.</p>
+      </div>
+
+      <!-- 리뷰 통계 하이라이트 바 -->
+      <div class="review_stats_bar">
+        <div class="review_stat_item">
+          <div class="review_stat_num">4.9점</div>
+          <p class="fs_14 fc_muted mt1">평균 종합 만족도 ★★★★★</p>
+        </div>
+        <div class="review_stat_item">
+          <div class="review_stat_num">98.7%</div>
+          <p class="fs_14 fc_muted mt1">지인 추천 및 재이용 의향</p>
+        </div>
+        <div class="review_stat_item">
+          <div class="review_stat_num">100%</div>
+          <p class="fs_14 fc_muted mt1">한국인 전문 인솔자 케어 만족도</p>
+        </div>
+        <div class="review_stat_item">
+          <div class="review_stat_num">2,140건+</div>
+          <p class="fs_14 fc_muted mt1">누적 고객 감사 후기</p>
+        </div>
+      </div>
+
+      <!-- 생생 후기 6선 그리드 -->
+      <div class="review_grid">
+
+        <!-- 후기 1 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"70대 부모님과 함께한 서부 지중해, 무릎 걱정 없이 천국 같았습니다."</h3>
+              <p class="review_body">
+                "부모님께서 무릎이 안 좋으셔서 일반 유럽 패키지는 짐 싸고 버스 타느라 지칠까 봐 엄두를 못 냈는데, 크루즈는 배에 짐을 딱 한 번 풀면 끝이라 너무 편안했습니다. 자고 일어나면 매일 아침 바르셀로나, 로마에 도착해 있으니 부모님께서 '생애 최고의 효도'라고 눈물을 글썽이셨어요."
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>김*수 고객님</strong> (서울 강서구)</span>
+              <span class="review_course_tag">서부 지중해 8일</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후기 2 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"산토리니 블루 돔을 발코니에서 바라보던 순간은 평생 못 잊습니다."</h3>
+              <p class="review_body">
+                "결혼 20주년 기념으로 동부 지중해를 선택했습니다. 에게해의 푸른 바다와 산토리니 이아마을의 하얀 집들이 석양에 물드는 모습은 영화 그 자체였습니다. 배 안에서 매일 밤 열리는 대극장 쇼와 정찬 레스토랑의 랍스터 코스 요리까지 완벽했습니다!"
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>이*영 고객님</strong> (경기 성남시)</span>
+              <span class="review_course_tag">동부 지중해 & 산토리니</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후기 3 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"알래스카 빙벽이 천둥소리를 내며 무너져 내릴 때의 전율!"</h3>
+              <p class="review_body">
+                "크루즈 14층 야외 온수 자쿠지에 몸을 담그고 만년설 피오르드를 감상하는 순간은 인생 최고의 힐링이었습니다. 빙하 바로 앞까지 배가 들어가서 얼음이 깨지는 웅장한 소리를 들었을 때는 온몸에 소름이 돋았습니다. 시니어 분들께 강력 추천합니다."
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>박*호 고객님</strong> (부산 해운대구)</span>
+              <span class="review_course_tag">알래스카 빙하 8일</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후기 4 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"영어를 전혀 못하는데도 한국인 인솔자님 덕에 황제 대우 받았습니다."</h3>
+              <p class="review_body">
+                "해외여행이 처음이라 언어 때문에 걱정이 태산이었는데, HD투어존 전문 인솔자님이 출국부터 입국, 선내 한국어 선상 신문 번역, 기항지 가이드까지 하나하나 손자처럼 살뜰히 챙겨주셨습니다. 자유여행의 여유와 패키지의 편안함을 동시에 누렸네요."
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>정*희 고객님</strong> (대구 수성구)</span>
+              <span class="review_course_tag">두바이 & 아라비아해</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후기 5 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"지갑 열 필요 없는 올인클루시브! 식사와 와인까지 풍성했습니다."</h3>
+              <p class="review_body">
+                "일반 패키지는 쇼핑 강요나 추가 옵션 비용이 많은데, HD투어존 크루즈는 기항지 투어 요금과 식사가 기본 포함이라 너무 깔끔했습니다. 24시간 뷔페에서 갓 구운 피자와 해산물을 실컷 먹고, 스와로브스키 크리스털 계단에서 인생 사진도 건졌습니다."
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>최*진 고객님</strong> (인천 연수구)</span>
+              <span class="review_course_tag">서부 지중해 8일</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후기 6 -->
+        <div class="review_card">
+          <div class="review_card_body">
+            <div>
+              <div class="review_stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <h3 class="review_title">"15회차만 내고 바로 출발! 10년 가격 동결 멤버십이라 든든합니다."</h3>
+              <p class="review_body">
+                "선지원 87.5%로 목돈 부담 없이 월 4만원대로 먼저 다녀왔습니다. 요즘 물가가 계속 오르는데 10년 동안 금액을 동결해 주는 보장까지 있어서 돌아오자마자 부모님 모시고 또 갈 생각으로 회원권을 하나 더 계약했습니다."
+              </p>
+            </div>
+            <div class="review_author_box">
+              <span><strong>오*석 고객님</strong> (서울 마포구)</span>
+              <span class="review_course_tag">선지원 멤버십 이용고객</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Official Cruise Boarding Guide (공식 크루즈 승선 완벽 가이드) -->
+  <section class="guide_section" id="guide-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">BOARDING GUIDE & TIPS</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-circle-info fc_gold mr2"></i>HD투어존 크루즈 승선 완벽 준비 가이드
+        </h2>
+        <p class="fs_18 fc_muted">초보자도 걱정 없는 승선 준비물, 드레스코드, 선내 이용 팁을 한눈에 확인하세요.</p>
+      </div>
+
+      <div class="guide_grid">
+        <div class="guide_card">
+          <div class="guide_icon"><i class="fa-solid fa-passport"></i></div>
+          <h3 class="fs_20 font_bold fc_white mb2">여권 & 승선 서류</h3>
+          <p class="fs_14 fc_muted lh_1_6">
+            여권 만료일은 출발일 기준 6개월 이상 남아 있어야 합니다. 비자 및 전자 입국 허가서는 HD투어존에서 사전에 대행 안내해 드립니다.
+          </p>
+        </div>
+
+        <div class="guide_card">
+          <div class="guide_icon"><i class="fa-solid fa-vest-patches"></i></div>
+          <h3 class="fs_20 font_bold fc_white mb2">선내 복장 & 드레스코드</h3>
+          <p class="fs_14 fc_muted lh_1_6">
+            낮에는 편안한 캐주얼과 운동화, 수영복을 착용하며, 선장 주최 갈라 디너 '포멀 나이트'에는 정장, 원피스 또는 멋진 한복을 권장합니다.
+          </p>
+        </div>
+
+        <div class="guide_card">
+          <div class="guide_icon"><i class="fa-solid fa-credit-card"></i></div>
+          <h3 class="fs_20 font_bold fc_white mb2">선상 카드 (SeaPass)</h3>
+          <p class="fs_14 fc_muted lh_1_6">
+            객실 키이자 신분증, 결제 수단입니다. 승선 시 신용카드(Visa/Master)를 등록해 두면 하선 시 선내 지출 내역이 자동으로 정산됩니다.
+          </p>
+        </div>
+
+        <div class="guide_card">
+          <div class="guide_icon"><i class="fa-solid fa-wifi"></i></div>
+          <h3 class="fs_20 font_bold fc_white mb2">와이파이 & 통신 안내</h3>
+          <p class="fs_14 fc_muted lh_1_6">
+            항해 중에는 위성 인터넷 패키지를 구매하여 카카오톡 등을 이용하실 수 있으며, 선내 무료 인트라넷 앱으로 오늘의 일정과 선상 신문을 확인합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Join CTA Section (온라인 간편 가입 배너) -->
+  <section class="join_cta_section" id="join-section">
+    <div class="wrap">
+      <div class="join_cta_card">
+        <div class="d_flex jc_sb ai_cen flex_wrap gap6">
+          <div class="join_cta_text" style="max-width: 680px;">
+            <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">FAST & EASY ENROLLMENT</span>
+            <h2 class="fs_32 font_extrabold fc_white mt1 mb3">
+              종이 서류 없이 스마트폰으로 3분 만에 간편 가입!
+            </h2>
+            <p class="fs_16 fc_muted lh_1_6">
+              선지원 87.5% 파격 혜택과 10년 가격 동결! 오직 맥스지사 고객님들께만 드리는 독점 혜택을 지금 바로 온라인 전자서명으로 안전하게 확정하세요.
+            </p>
+          </div>
+          <div class="join_cta_btn_wrap">
+            <a href="https://intranet.htourzone.co.kr/api/join/?s=20260090" target="_blank" rel="noopener noreferrer" class="btn btn_gold_glow fs_20 px8 py4">
+              <i class="fa-solid fa-file-signature mr2"></i> 온라인 가입하러 가기 ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Lucky Draw Section (설명회 현장 추첨 게임) -->
+  <section class="lucky_draw_section" id="lucky-draw">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">EXCLUSIVE EVENT</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2">
+          <i class="fa-solid fa-gift fc_gold mr2"></i>설명회 참석 고객 특별 럭키 드로우
+        </h2>
+        <p class="fs_18 fc_muted">개인정보를 기입해 주신 소중한 고객님들을 위한 실시간 두근두근 행운의 추첨 이벤트입니다!</p>
+      </div>
+
+      <!-- 추첨 방식 선택: 기본 vs 고급 (구슬 레이스) -->
+      <div class="draw_type_switch_wrap">
+        <div class="draw_type_switch">
+          <button type="button" class="draw_type_btn" id="btnTypeBasic" onclick="switchDrawType('basic')">
+            <i class="fa-solid fa-bolt mr1"></i> 기본 모드 (빠른 전광판 추첨)
+          </button>
+          <button type="button" class="draw_type_btn active" id="btnTypeAdvanced" onclick="switchDrawType('advanced')">
+            <i class="fa-solid fa-trophy mr1"></i> 고급 모드 (스릴만점 구슬 레이스 🏁)
+          </button>
+        </div>
+      </div>
+
+      <div class="lucky_box">
+        <!-- 좌측: 추첨 설정 패널 -->
+        <div class="lucky_settings">
+          <h3 class="fs_20 font_bold fc_gold mb4"><i class="fa-solid fa-sliders mr2"></i>추첨 옵션 설정</h3>
+          
+          <!-- 참가자 모드 선택 -->
+          <div class="lucky_mode_tabs d_flex gap2 mb4">
+            <button type="button" class="lucky_tab_btn active" id="tabModeNumber" onclick="setDrawMode('number')">
+              <i class="fa-solid fa-hashtag mr1"></i> 번호 추첨 (N명)
+            </button>
+            <button type="button" class="lucky_tab_btn" id="tabModeNames" onclick="setDrawMode('names')">
+              <i class="fa-solid fa-users mr1"></i> 고객명단 직접입력
+            </button>
+          </div>
+
+          <!-- 모드 1: 번호 모드 (참가자 수) -->
+          <div id="panelModeNumber" class="lucky_input_group mb4">
+            <label class="lucky_label">참가자 총 인원수 (1번 ~ N번 부여)</label>
+            <div class="d_flex ai_cen gap2">
+              <input type="number" id="inputTotalParticipants" class="lucky_input" value="30" min="2" max="100" style="width: 120px;">
+              <span class="fc_muted fs_14">명 참석</span>
+            </div>
+            <span class="fc_muted fs_12 mt1 d_block">※ 고급 모드에서는 각 번호가 적힌 구슬들이 경주합니다!</span>
+          </div>
+
+          <!-- 모드 2: 고객명단 입력 모드 -->
+          <div id="panelModeNames" class="lucky_input_group mb4" style="display:none;">
+            <label class="lucky_label">참가자 명단 (줄바꿈 또는 쉼표 구분)</label>
+            <textarea id="inputParticipantsList" class="lucky_textarea" rows="4" placeholder="홍길동&#10;김철수&#10;이영희&#10;박지성 (전화 뒷자리 등)"></textarea>
+            <span class="fc_muted fs_12 mt1 d_block">※ 참가자별 이름 구슬이 생성되어 레이스를 펼칩니다.</span>
+          </div>
+
+          <!-- 당첨자 수 -->
+          <div class="lucky_input_group mb4">
+            <label class="lucky_label">추첨할 당첨자 수 (순위별)</label>
+            <div class="d_flex ai_cen gap2">
+              <input type="number" id="inputWinnerCount" class="lucky_input" value="3" min="1" max="10" style="width: 120px;">
+              <span class="fc_muted fs_14">명 당첨 (1등, 2등, 3등...)</span>
+            </div>
+          </div>
+
+          <!-- 당첨 상품 -->
+          <div class="lucky_input_group mb4">
+            <label class="lucky_label">당첨 상품 (순위별 지정)</label>
+            <input type="text" id="inputPrizes" class="lucky_input" style="width: 100%;" value="1등: 신세계상품권 10만원, 2등: 크루즈 고급와인, 3등: 프리미엄 트래블키트" placeholder="예: 1등 백화점상품권, 2등 와인세트">
+          </div>
+
+          <!-- 전체화면 시작 옵션 토글 -->
+          <div class="lucky_input_group mb5" style="background: #ffffff; padding: 12px 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+            <label class="d_flex ai_cen gap2 cursor_pointer" style="margin-bottom: 0;">
+              <input type="checkbox" id="checkAutoFullscreen" checked style="width: 18px; height: 18px; accent-color: #c9a24f; cursor: pointer;">
+              <span class="fs_14 font_bold" style="color: #0f172a;"><i class="fa-solid fa-expand fc_gold mr1"></i> 추첨 시작 시 전체화면으로 진행</span>
+            </label>
+            <span class="fs_12 mt1 d_block" style="color: #64748b;">※ 대형 스크린/빔프로젝터 현장 발표용 전체화면 모드</span>
+          </div>
+
+          <div class="d_flex gap2">
+            <button type="button" class="lucky_btn_sub" onclick="resetLuckyDraw()">
+              <i class="fa-solid fa-rotate-right mr1"></i> 추첨 초기화
+            </button>
+          </div>
+        </div>
+
+        <!-- 우측: 추첨 스테이지 영역 (전체화면 대상 컨테이너) -->
+        <div class="lucky_fullscreen_target" id="luckyFullscreenTarget">
+          
+          <!-- 전체화면 제어 상단 바 -->
+          <div class="lucky_fs_header_bar">
+            <button type="button" class="lucky_fs_toggle_btn" id="btnLuckyFullscreenToggle" onclick="toggleLuckyFullscreen()">
+              <i class="fa-solid fa-expand"></i> <span id="textLuckyFs">전체화면 발표 모드</span>
+            </button>
+          </div>
+
+          <!-- 전체화면 상태일 때 표시되는 닫기 버튼 -->
+          <button type="button" class="lucky_fs_close_btn btn_gold_glow px4 py2" onclick="exitLuckyFullscreen()">
+            <i class="fa-solid fa-compress mr1"></i> 전체화면 나가기 (ESC)
+          </button>
+
+          <!-- 우측 1: [고급 모드] 구슬 굴리기 레이스 스테이지 -->
+          <div class="marble_stage_wrap" id="luckyStageAdvanced">
+            <div class="marble_race_box">
+              <!-- 좌측 이벤트 안내 뱃지 -->
+              <div class="marble_event_badges">
+                <span class="event_pill slider"><i class="fa-solid fa-arrows-left-right"></i> ◄═► 무빙 슬라이더 (좌우 왕복 바)</span>
+                <span class="event_pill pendulum"><i class="fa-solid fa-stopwatch"></i> ⏱️ 진자 해머 (시계추 충돌)</span>
+                <span class="event_pill bump"><i class="fa-solid fa-meteor"></i> 💥 슈퍼 범퍼 (강력 반발)</span>
+                <span class="event_pill boost"><i class="fa-solid fa-bolt"></i> ⚡ 스피드 부스터 (급가속)</span>
+              </div>
+
+              <!-- 실시간 중계 보드 -->
+              <div class="marble_live_board" id="marbleLiveBoard">
+                <p class="fs_12 font_bold fc_gold mb1"><i class="fa-solid fa-flag-checkered mr1"></i>실시간 레이스</p>
+                <div id="marbleLiveList">
+                  <div class="marble_live_item"><span class="marble_live_rank">준비</span><span class="marble_live_name">출발 대기</span></div>
+                </div>
+              </div>
+
+              <!-- 레이스 물리 캔버스 -->
+              <canvas id="marbleCanvas" class="marble_canvas" width="800" height="600"></canvas>
+            </div>
+
+            <!-- 레이스 시작 버튼 -->
+            <div class="lucky_action_ctr ta_cen mt4">
+              <button type="button" class="lucky_start_btn" id="btnStartMarbleRace" onclick="startMarbleRace()">
+                <i class="fa-solid fa-play mr2"></i> 구슬 레이스 출발! (GO)
+              </button>
+            </div>
+
+            <!-- 당첨자 결과 목록 -->
+            <div class="lucky_results_wrap mt4" id="marbleResultsWrap" style="display:none;">
+              <div class="d_flex jc_sb ai_cen mb3">
+                <h4 class="fs_18 font_bold fc_gold"><i class="fa-solid fa-crown mr2"></i>🏁 골인! 최종 당첨자</h4>
+                <button class="lucky_copy_btn" onclick="copyWinners('marble')">
+                  <i class="fa-solid fa-copy mr1"></i> 명단 복사
+                </button>
+              </div>
+              <div class="lucky_winners_list" id="marbleWinnersList"></div>
+            </div>
+          </div>
+
+          <!-- 우측 2: [기본 모드] 빠른 전광판 스테이지 (기본 숨김) -->
+          <div class="lucky_stage" id="luckyStageBasic" style="display:none;">
+            <div class="lucky_display_board">
+              <div class="lucky_status_badge" id="luckyStatusBadge">추첨 준비 완료</div>
+              
+              <div class="lucky_rolling_area">
+                <div class="lucky_slot_box">
+                  <span class="lucky_slot_text" id="luckySlotText">READY!</span>
+                </div>
+              </div>
+
+              <div class="lucky_current_prize" id="luckyCurrentPrize">
+                버튼을 누르면 행운의 추첨이 시작됩니다!
+              </div>
+            </div>
+
+            <div class="lucky_action_ctr ta_cen mt6">
+              <button type="button" class="lucky_start_btn" id="btnStartDraw" onclick="startLuckyDraw()">
+                <i class="fa-solid fa-bolt mr2"></i> 빠른 번호 추첨!
+              </button>
+            </div>
+
+            <div class="lucky_results_wrap mt6" id="luckyResultsWrap" style="display:none;">
+              <div class="d_flex jc_sb ai_cen mb3">
+                <h4 class="fs_18 font_bold fc_gold"><i class="fa-solid fa-crown mr2"></i>축하합니다! 최종 당첨자</h4>
+                <button class="lucky_copy_btn" onclick="copyWinners('basic')">
+                  <i class="fa-solid fa-copy mr1"></i> 명단 복사
+                </button>
+              </div>
+              <div class="lucky_winners_list" id="luckyWinnersList"></div>
+            </div>
+          </div>
+
+        </div> <!-- /.lucky_fullscreen_target -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal Popup -->
+  <div class="video_modal" id="videoModal">
+    <div class="video_modal_box">
+      <div class="video_modal_header">
+        <h4 class="fs_18 font_bold fc_white" id="modalVideoTitle">크루즈 영상 시청</h4>
+        <button class="video_modal_close" onclick="closeVideoModal()" title="닫기 (ESC)">&times;</button>
+      </div>
+      <div class="modal_video_wrapper" id="modalVideoWrapper">
+        <div class="seek_indicator left" id="seekBackIndicator">
+          <i class="fa-solid fa-rotate-left"></i> -10초
+        </div>
+        <div class="seek_indicator right" id="seekFwdIndicator">
+          <i class="fa-solid fa-rotate-right"></i> +10초
+        </div>
+        <video id="modalVideoPlayer" controls playsinline preload="metadata">
+          <source src="" type="video/mp4" id="modalVideoSource">
+          브라우저가 비디오 재생을 지원하지 않습니다.
+        </video>
+      </div>
+      <!-- 전용 퀵 컨트롤 바 (10초 뒤로/앞으로, 재생/일시정지, 배속 조절) -->
+      <div class="modal_video_controls">
+        <div class="video_ctrl_group">
+          <button class="video_ctrl_btn" id="btnSeekBack10" title="10초 뒤로 건너뛰기 (단축키: ← 또는 J)">
+            <i class="fa-solid fa-rotate-left"></i> 10초 뒤로
+          </button>
+          <button class="video_ctrl_btn primary" id="btnTogglePlay" title="재생 / 일시정지 (단축키: 스페이스바)">
+            <i class="fa-solid fa-pause" id="btnPlayIcon"></i> <span id="btnPlayText">일시정지</span>
+          </button>
+          <button class="video_ctrl_btn" id="btnSeekFwd10" title="10초 앞으로 건너뛰기 (단축키: → 또는 L)">
+            10초 앞으로 <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+        <div class="video_ctrl_group">
+          <span class="fs_13 fc_muted pc_only"><i class="fa-solid fa-keyboard mr1"></i>방향키 ←/→ 로도 10초 이동</span>
+          <select class="video_speed_select" id="videoSpeedSelect" title="재생 속도 조절">
+            <option value="0.75">0.75배속</option>
+            <option value="1.0" selected>1.0배속 (기본)</option>
+            <option value="1.25">1.25배속</option>
+            <option value="1.5">1.5배속</option>
+            <option value="2.0">2.0배속</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cruise Footer -->
+  <footer class="cruise_footer">
+    <div class="wrap d_flex jc_sb ai_cen flex_wrap gap4">
+      <div>
+        <p class="fs_18 font_bold fc_gold mb2">더좋은라이프 맥스지사</p>
+        <p class="fs_14 fc_muted">공식 상담 및 문의: <strong>010-9509-8701</strong> | HD투어존 공식 협력 지사</p>
+        <p class="fs_12 fc_muted mt2 opacity_60">※ 본 페이지는 HD투어존 x 더좋은라이프 맥스지사 공식 회원 및 교육 안내 페이지입니다.</p>
+      </div>
+      <div class="d_flex gap3">
+        <a href="index.html" class="btn btn_line fs_14 px4 py2" style="border-color: rgba(255,255,255,0.2); color: #fff;">
+          <i class="fa-solid fa-arrow-left mr1"></i> 메인 상품 페이지로 돌아가기
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Canvas Confetti (Fireworks for Lucky Draw) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Cruise Script -->
+  <script src="cruise.js?v=4"></script>
+</body>
+</html>

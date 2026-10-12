@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>더좋은하이브리드698 교육관 & 상품설명회 | 더좋은라이프 맥스지사</title>
+  <meta name="description" content="더좋은하이브리드698 프리미엄 상품 교육자료 및 프레젠테이션. KB 헬스케어, 최신형 가전 혜택, 라이프케어 전환, 만기 100% 환급, 골프 특별 멤버십.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Global Base CSS -->
+  <link rel="stylesheet" href="index.css?v=40">
+
+  <style>
+    :root {
+      --dark: #0a1120;
+      --card-bg: #111a2e;
+      --gold: #c9a24f;
+      --gold-light: #fce085;
+      --green: #10b981;
+      --green-light: #6ee7b7;
+    }
+    body {
+      background-color: var(--dark);
+      color: #e2e8f0;
+      font-family: 'Noto Sans KR', sans-serif;
+      overflow-x: hidden;
+    }
+    .hybrid_header {
+      background: rgba(10, 17, 32, 0.95);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+    }
+    .hybrid_hero_banner {
+      padding: 50px 0 35px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, #162947 0%, #0a1120 70%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hybrid_badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+      border: 1px solid var(--green);
+      border-radius: 30px;
+      padding: 6px 16px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .hybrid_main_title {
+      font-size: 3.4rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .hybrid_main_sub {
+      font-size: 1.7rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .hybrid_slider_section {
+      padding: 40px 0 70px;
+      background: #0d1527;
+    }
+    .hybrid_slide_box {
+      background: #111a2e;
+      border: 2px solid rgba(16, 185, 129, 0.35);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    }
+    .slide_card_content {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      background: #080d1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 60px;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .slide_card_tag {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--green);
+      background: rgba(16, 185, 129, 0.15);
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .slide_card_title {
+      font-size: 3.8rem;
+      font-weight: 900;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 25px;
+      line-height: 1.3;
+    }
+    .slide_card_desc {
+      font-size: 1.8rem;
+      color: #cbd5e1;
+      text-align: center;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+    .slide_feature_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 950px;
+      margin-top: 35px;
+    }
+    .slide_feature_item {
+      background: #16233b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+    .slide_feature_item i {
+      font-size: 2.4rem;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .slide_feature_item h4 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .slide_feature_item p {
+      font-size: 1.3rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .nav_link_btn {
+      color: #cbd5e1;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .nav_link_btn:hover {
+      color: var(--green);
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .btn_green_glow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
+      color: #0b1120 !important;
+      font-weight: 800;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      border: 1px solid #6ee7b7;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn_green_glow:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(16, 185, 129, 0.65);
+      background: linear-gradient(135deg, #ffffff 0%, #34d399 40%, #10b981 100%);
+    }
+    @media (max-width: 768px) {
+      .slide_card_content { padding: 25px 20px; }
+      .slide_card_title { font-size: 2.2rem; }
+      .slide_card_desc { font-size: 1.4rem; }
+      .slide_feature_list { grid-template-columns: 1fr; gap: 10px; margin-top: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hybrid_header">
+    <div class="wrap d_flex jc_sb ai_cen">
+      <div class="d_flex ai_cen gap4">
+        <a href="index.html" class="logo">
+          <span class="logo_text fc_white">더좋은라이프 <strong class="fc_gold">맥스지사</strong></span>
+        </a>
+        <span class="fs_14 fc_muted pc_only" style="border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;">
+          더좋은하이브리드698 교육관
+        </span>
+      </div>
+
+      <div class="d_flex ai_cen gap3">
+        <a href="#benefits-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-gift mr1"></i> 핵심 5대 혜택
+        </a>
+        <a href="#video-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-play-circle mr1"></i> 교육 영상
+        </a>
+        <a href="#resource-section" class="nav_link_btn pc_only">
+          <i class="fa-solid fa-folder-open mr1"></i> 공식 자료실
+        </a>
+        <a href="cruise.html" class="nav_link_btn" style="color:var(--gold); font-weight:700;">
+          <i class="fa-solid fa-ship mr1"></i> 크루즈 설명관 ↗
+        </a>
+        <a href="index.html" class="back_to_home">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>메인 홈</span>
+        </a>
+        <a href="tel:01095098701" class="btn btn_green_glow fs_13 px4 py2 pc_only" style="border-radius: 8px;">
+          <i class="fa-solid fa-phone mr1"></i> 010-9509-8701
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Title Banner -->
+  <section class="hybrid_hero_banner">
+    <div class="wrap">
+      <span class="hybrid_badge"><i class="fa-solid fa-award mr1"></i> 더좋은라이프 맥스지사 공식 교육자료</span>
+      <h1 class="hybrid_main_title">더 좋은 내일을 완성하는 <span style="color:#10b981;">더좋은하이브리드698</span></h1>
+      <p class="hybrid_main_sub">
+        단순한 상조를 넘어선 프리미엄 라이프케어 솔루션!<br class="pc_only">
+        KB 헬스케어 10년 제공 · 최신형 가전 렌탈 결합 지원 · 럭셔리 크루즈/웨딩 전환 · 만기 100% 전액 환급 보장
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. Presentation Slides Section -->
+  <section class="hybrid_slider_section">
+    <div class="wrap">
+      
+      <div class="pres_toolbar_dark d_flex jc_sb ai_cen mb4" style="background:#111a2e; padding:12px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+        <div class="pres_info d_flex ai_cen gap3">
+          <span class="badge_pill" style="background:#10b981; color:#0b1120; font-weight:800; font-size:1.3rem;">하이브리드698 교육 슬라이드</span>
+          <div class="pres_pagination fc_white font_bold fs_18"></div>
+        </div>
+        <div class="pres_actions d_flex ai_cen gap3">
+          <span class="fs_14 fc_muted pc_only"><i class="fa-solid fa-keyboard mr1"></i>키보드 좌우(←/→) 방향키로 넘기실 수 있습니다</span>
+        </div>
+      </div>
+
+      <!-- 메인 슬라이더 (16:9 와이드) -->
+      <div class="hybrid_slide_box">
+        <div class="swiper hybrid-swiper">
+          <div class="swiper-wrapper">
+            
+            <!-- 슬라이드 1: 표지 -->
+            <div class="swiper-slide">
+              <div class="slide_card_content">
+                <span class="slide_card_tag">SLIDE 01 · OVERVIEW</span>
+                <h2 class="slide_card_title">더 좋은 삶을 위한 선택<br><span style="color:#10b981;">더좋은하이브리드698</span></h2>
+                <p class="slide_card_desc">
+                  건강 관리부터 최신 가전 지원, 필요할 때 언제든 크루즈 여행과 웨딩으로 전환 가능한 대한민국 최초의 올인원 라이프케어 멤버십입니다.
+                </p>
+                <div class="slide_feature_list">
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h4>KB 헬스케어</h4>
+                    <p>10년 무상 케어 서비스</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-tv"></i>
+                    <h4>최신형 가전 지원</h4>
+                    <p>삼성/LG 프리미엄 가전 결합</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-rotate"></i>
+                    <h4>라이프케어 전환</h4>
+                    <p>크루즈 · 웨딩 · 골프 전환</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 2: KB 헬스케어 -->
+            <div class="swiper-slide">
+              <div class="slide_card_content">
+                <span class="slide_card_tag">SLIDE 02 · HEALTH CARE</span>
+                <h2 class="slide_card_title">KB국민은행 그룹이 제공하는<br><span style="color:#10b981;">프리미엄 헬스케어 10년 제공</span></h2>
+                <p class="slide_card_desc">
+                  가입 즉시 10년 동안 고객님과 가족의 건강을 밀착 관리해 드립니다. 전국 종합병원 명의 예약 대행부터 건강검진 우대 예약, 전문 간병인 지원 서비스까지 아낌없이 누리세요.
+                </p>
+                <div class="slide_feature_list">
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h4>전국 명의 예약 대행</h4>
+                    <p>상급종합병원 빠른 진료 예약</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <h4>전문 간병인 지원</h4>
+                    <p>입원 시 맞춤 전문 간병인 파견</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h4>건강검진 우대</h4>
+                    <p>전국 제휴 검진센터 최대 혜택</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 3: 최신 가전 결합 -->
+            <div class="swiper-slide">
+              <div class="slide_card_content">
+                <span class="slide_card_tag">SLIDE 03 · APPLIANCES</span>
+                <h2 class="slide_card_title">가입 즉시 집으로 직배송!<br><span style="color:#10b981;">삼성 & LG 최신 프리미엄 가전 지원</span></h2>
+                <p class="slide_card_desc">
+                  냉장고, 세탁기, 건조기, TV, 스타일러 등 원하는 최신형 가전을 선택하시면 공식 물류센터에서 집으로 무상 직배송 및 설치해 드립니다. 가전 렌탈료는 만기 시 전액 만기축하금으로 환급됩니다.
+                </p>
+                <div class="slide_feature_list">
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h4>공식 직배송 설치</h4>
+                    <p>삼성/LG 전문 기사 무료 설치</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>정품 A/S 보장</h4>
+                    <p>제조사 정품 품질 보증</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-gift"></i>
+                    <h4>만기 시 100% 지원</h4>
+                    <p>만기축하금으로 전액 돌려받는 혜택</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 4: 라이프케어 전환 -->
+            <div class="swiper-slide">
+              <div class="slide_card_content">
+                <span class="slide_card_tag">SLIDE 04 · LIFE CARE TRANSITION</span>
+                <h2 class="slide_card_title">필요할 때 언제든 자유롭게<br><span style="color:#c9a24f;">럭셔리 크루즈 · 프리미엄 웨딩 전환</span></h2>
+                <p class="slide_card_desc">
+                  장례 서비스로 묶여 있지 않습니다! 결혼을 앞둔 자녀의 웨딩 패키지로, 또는 부모님의 환갑/칠순을 위한 지중해·알래스카 럭셔리 크루즈 여행으로 언제든 100% 동등 가치로 전환 이용하실 수 있습니다.
+                </p>
+                <div class="slide_feature_list">
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-ship" style="color:#c9a24f;"></i>
+                    <h4>럭셔리 크루즈 투어</h4>
+                    <p>지중해/알래스카 최고급 항해</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-ring" style="color:#ec4899;"></i>
+                    <h4>프리미엄 웨딩</h4>
+                    <p>스드메 & 호텔급 웨딩 플랜</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-golf-ball-tee" style="color:#10b981;"></i>
+                    <h4>골프 멤버십 우대</h4>
+                    <p>투비전 NX & KPGA 프로 레슨</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 5: 안전 보증 & 만기 100% 환급 -->
+            <div class="swiper-slide">
+              <div class="slide_card_content">
+                <span class="slide_card_tag">SLIDE 05 · REFUND GUARANTEE</span>
+                <h2 class="slide_card_title">제1금융권 신한은행 예치 보증<br><span style="color:#10b981;">미사용 시 납입금 100% 전액 환급!</span></h2>
+                <p class="slide_card_desc">
+                  서비스를 단 한 번도 이용하지 않으셔도 괜찮습니다. 만기 도래 시 고객님께서 납입하신 총금액 498만원 원금 100%를 단 1원의 손실도 없이 그대로 안전하게 환급해 드립니다.
+                </p>
+                <div class="slide_feature_list">
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h4>신한은행 예치계약</h4>
+                    <p>법적 안전 보장 50% 예치</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h4>원금 손실 제로</h4>
+                    <p>만기 시 100% 안전 목돈 환급</p>
+                  </div>
+                  <div class="slide_feature_item">
+                    <i class="fa-solid fa-percent"></i>
+                    <h4>실질적 저축 효과</h4>
+                    <p>혜택은 누리고 원금은 회수</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 슬라이더 컨트롤 -->
+          <button class="pres_nav_btn pres_btn_prev" aria-label="이전 슬라이드">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="pres_nav_btn pres_btn_next" aria-label="다음 슬라이드">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. Video Showcase Section -->
+  <section class="video_section" id="video-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">EDUCATION VIDEOS</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2"><i class="fa-solid fa-clapperboard fc_gold mr2"></i>하이브리드698 교육 및 홍보 영상</h2>
+        <p class="fs_18 fc_muted">영상을 클릭하시면 고화질 플레이어로 편리하게 시청하실 수 있습니다.</p>
+      </div>
+
+      <div class="video_grid">
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/송가인 동영상 11.mp4', '홍보모델 송가인의 더좋은라이프 추천')">
+            <img src="cruise/송가인 사진 (1).png" alt="송가인 추천 영상" style="object-fit: contain; background: #fff;">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">홍보모델</span>
+            <span class="video_duration">인터뷰 영상</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">가수 송가인의 라이프케어 추천 영상</h3>
+            <p class="video_desc">"가족에게 가장 필요한 서비스만 골라 담았습니다!" 홍보모델 송가인이 전하는 더좋은라이프의 신뢰와 혜택 메시지입니다.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/송가인 동영상 11.mp4', '홍보모델 송가인의 더좋은라이프 추천')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+
+        <div class="video_card">
+          <div class="video_thumb_box" onclick="openVideoModal('cruise/cf영상.mp4', '더좋은라이프 공식 TV CF 광고')">
+            <img src="cruise/KakaoTalk_20260713_180226874_03.png" alt="공식 TV CF" style="object-position: top;">
+            <div class="video_play_overlay"><div class="video_play_btn"><i class="fa-solid fa-play"></i></div></div>
+            <span class="video_badge">공식 CF</span>
+            <span class="video_duration">TV 광고</span>
+          </div>
+          <div class="video_content">
+            <h3 class="video_title">더좋은라이프 공식 TV CF</h3>
+            <p class="video_desc">단순 상조가 아닌 토탈 라이프케어! 삶의 모든 순간을 가치 있게 채워주는 5대 핵심 서비스를 한눈에 확인하세요.</p>
+            <button class="video_action_btn" onclick="openVideoModal('cruise/cf영상.mp4', '더좋은라이프 공식 TV CF 광고')">
+              <i class="fa-solid fa-circle-play mr1"></i> 영상 시청하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Resource Center Section -->
+  <section class="resource_section" id="resource-section">
+    <div class="wrap">
+      <div class="ta_cen mb8">
+        <span class="badge_pill bg_gold fc_dark font_bold fs_14 mb2">DOWNLOAD CENTER</span>
+        <h2 class="fs_36 font_extrabold fc_white mt1 mb2"><i class="fa-solid fa-folder-open fc_gold mr2"></i>교육 매뉴얼 및 공식 서식 자료실</h2>
+        <p class="fs_18 fc_muted">고객 상담과 세일즈 교육에 필요한 공식 자료를 다운로드하세요.</p>
+      </div>
+
+      <div class="resource_grid">
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-file-pdf"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">공식 안내 책자</span>
+            <h3 class="fs_20 font_bold fc_white mb2">하이브리드698 종합 안내서 (PDF)</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">KB 헬스케어, 가전 지원, 납입 조건 및 약관이 정리된 종합 안내 브로슈어입니다.</p>
+          </div>
+          <a href="HD_Tourzone_Luxury_Cruise_Membership.pptx.pdf" target="_blank" download class="video_action_btn">
+            <i class="fa-solid fa-download mr1"></i> 안내서 다운로드
+          </a>
+        </div>
+
+        <div class="resource_card">
+          <div>
+            <div class="res_icon_box"><i class="fa-solid fa-golf-ball-tee"></i></div>
+            <span class="fs_12 fc_gold font_bold mb1 d_block">맥스지사 독점</span>
+            <h3 class="fs_20 font_bold fc_white mb2">골프존 NX & KPGA 레슨 안내서</h3>
+            <p class="fs_14 fc_muted lh_1_6 mb6">맥스지사 고객만을 위한 골프존 대림구로디지털단지점 및 KPGA 1:1 레슨 이용권 안내서입니다.</p>
+          </div>
+          <a href="tel:01095098701" class="video_action_btn">
+            <i class="fa-solid fa-phone mr1"></i> 레슨 예약 문의
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="cruise_footer">
+    <div class="wrap d_flex jc_sb ai_cen flex_wrap gap4">
+      <div>
+        <p class="fs_16 fc_white font_bold mb2">더좋은라이프 맥스지사 (HYBRID 698)</p>
+        <p class="fs_13 fc_muted lh_1_6">
+          상담문의: 010-9509-8701 · 제1금융권 신한은행 50% 지급보증<br>
+          서울특별시 구로구 디지털로 33길 11, 골프존 대림구로디지털단지점 제휴
+        </p>
+      </div>
+      <div class="d_flex gap2 flex_wrap">
+        <a href="cruise.html" class="btn btn_gold fs_14 px4 py2" style="border-radius: 8px;">
+          <i class="fa-solid fa-ship mr1"></i> 크루즈 설명관 ↗
+        </a>
+        <a href="index.html" class="btn fs_14 px4 py2" style="background:rgba(255,255,255,0.08); color:#fff; border-radius:8px;">
+          <i class="fa-solid fa-home mr1"></i> 메인 홈으로
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 비디오 모달 플레이어 -->
+  <div class="video_modal" id="videoModal">
+    <div class="video_modal_backdrop" onclick="closeVideoModal()"></div>
+    <div class="video_modal_container">
+      <div class="video_modal_header">
+        <div class="video_modal_title" id="videoModalTitle">동영상 재생</div>
+        <button class="video_modal_close" onclick="closeVideoModal()" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="video_modal_body">
+        <video id="modalVideoPlayer" playsinline preload="metadata">
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const hybridSwiper = new Swiper('.hybrid-swiper', {
+      loop: true,
+      speed: 600,
+      navigation: {
+        nextEl: '.pres_btn_next',
+        prevEl: '.pres_btn_prev',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+      pagination: {
+        el: '.pres_pagination',
+        type: 'fraction',
+      },
+    });
+
+    // 비디오 모달 제어
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideoPlayer');
+    const modalTitle = document.getElementById('videoModalTitle');
+
+    function openVideoModal(videoSrc, title) {
+      if (!modal || !modalVideo) return;
+      modalTitle.textContent = title || '동영상 재생';
+      modalVideo.src = videoSrc;
+      modal.classList.add('active');
+      modalVideo.play().catch(e => console.log('Autoplay blocked:', e));
+    }
+
+    function closeVideoModal() {
+      if (!modal || !modalVideo) return;
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (modal && modal.classList.contains('active') && e.key === 'Escape') {
+        closeVideoModal();
+      }
+    });
+  </script>
+</body>
+</html>

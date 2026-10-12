@@ -1041,3 +1041,224 @@
     }
   }
 
+  /* ==========================================================================
+     Section 5: Cruise Presentation Viewer
+     ========================================================================== */
+  .sect_cruise {
+    padding: 100px 0;
+  }
+  .pres_container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pres_card {
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+  }
+  .pres_toolbar {
+    padding: 16px 24px;
+    background: #fdfdfd;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .badge_pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .pres_fullscreen_btn {
+    background: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+  }
+  .pres_fullscreen_btn:hover {
+    background: var(--gold);
+    color: #ffffff;
+    border-color: var(--gold);
+  }
+  .pres_slider_box {
+    position: relative;
+    background: #0f172a;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .presentation-swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .pres_slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1120;
+  }
+  .pres_img_wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pres_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .pres_nav_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+  }
+  .pres_nav_btn:hover {
+    background: var(--gold);
+    color: #ffffff;
+    border-color: var(--gold);
+    transform: translateY(-50%) scale(1.1);
+  }
+  .pres_btn_prev {
+    left: 20px;
+  }
+  .pres_btn_next {
+    right: 20px;
+  }
+  .pres_thumbs_box {
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+  }
+  .presentation-thumbs-swiper {
+    width: 100%;
+  }
+  .pres_thumb_item {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+  }
+  .pres_thumb_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pres_thumb_item span {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+  .presentation-thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px var(--gold);
+    transform: translateY(-2px);
+  }
+  .pres_footer_bar {
+    padding: 18px 24px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+  }
+
+  /* Fullscreen Presentation Mode */
+  .pres_card:fullscreen {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+  }
+  .pres_card:fullscreen .pres_slider_box {
+    flex: 1;
+    aspect-ratio: unset;
+    height: calc(100vh - 140px);
+  }
+  .pres_card:fullscreen .pres_toolbar {
+    background: #111;
+    color: #fff;
+    border-bottom: 1px solid #333;
+  }
+  .pres_card:fullscreen .pres_pagination {
+    color: #fff !important;
+  }
+  .pres_card:fullscreen .pres_footer_bar {
+    background: #111;
+    border-top: 1px solid #333;
+    color: #fff;
+  }
+  .pres_card:fullscreen .pres_footer_text p {
+    color: #eee !important;
+  }
+  .pres_card:fullscreen .pres_thumbs_box {
+    background: #181818;
+    border-top: 1px solid #333;
+  }
+
+  @media (max-width: 768px) {
+    .sect_cruise {
+      padding: 60px 0;
+    }
+    .pres_toolbar {
+      padding: 12px 16px;
+    }
+    .pres_nav_btn {
+      width: 36px;
+      height: 36px;
+      font-size: 1.4rem;
+    }
+    .pres_btn_prev { left: 8px; }
+    .pres_btn_next { right: 8px; }
+    .pres_footer_bar {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 16px;
+    }
+    .pres_footer_bar .pres_footer_btns {
+      width: 100%;
+    }
+    .pres_footer_bar .pres_footer_btns .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+

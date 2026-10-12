@@ -1,0 +1,10 @@
+# GitHub 100MB 초과 대용량 파일 제외 (GitHub 업로드 거부 방지)
+cruise/26_0218.CJ*.mp4
+cruise/26_0300.KT*.mp4
+cruise/*세일즈교육*.pptx
+cruise/전단지(2P).pdf
+
+# 개발 임시 파일
+scratch_*
+test_*.py
+*.tmp
